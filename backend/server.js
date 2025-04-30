@@ -1,6 +1,6 @@
 // ✅ Configuratie bovenaan
 require("dotenv").config();
-const serverless = require("serverless-http");
+
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
@@ -12,14 +12,6 @@ const { OpenAI } = require("openai");
 const app = express();
 const PORT = 5050;  
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-// na al je API‐routes, vóór app.listen:
-app.use(express.static(path.join(__dirname, "build")));
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-
-// start de server
-app.listen(PORT, () => console.log(`✅ Server draait op port ${PORT}`));
 
 // ✅ Middleware
 app.use(express.json());
@@ -565,4 +557,3 @@ app.post("/api/upload-vacature", upload.single("pdf"), async (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Server draait op http://localhost:${PORT}`);
 });
-module.exports.handler = serverless(app);

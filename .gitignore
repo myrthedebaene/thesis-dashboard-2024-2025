@@ -1,0 +1,8 @@
+# node
+node_modules/
+
+# build output
+build/
+
+# env
+.env
