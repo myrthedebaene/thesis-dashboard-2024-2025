@@ -1,0 +1,16 @@
+[build]
+  # draai build op de root (want daar staat je React 'src' en package.json)
+  command   = "npm install && npm run build"
+  publish   = "build"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from    = "/api/*"
+  to      = "/.netlify/functions/server/:splat"
+  status  = 200
+  force   = true
+
+[[redirects]]
+  from    = "/*"
+  to      = "/index.html"
+  status  = 200
