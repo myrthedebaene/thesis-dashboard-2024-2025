@@ -6,9 +6,11 @@ import { Box, Stack } from "@mui/material";
 import MainContent from "./MainContent";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import candidatesData from "../../data/candidates.json";
+
 
 const CandidateDashboard = () => {
-  const [candidateList, setCandidateList] = useState({});
+  const [candidateList, setCandidateList] = useState(candidatesData);
   const [searchInput, setSearchInput] = useState("");
   const [statusFilter, setStatusFilter] = useState("");
   const [selectedKey, setSelectedKey] = useState(null);
@@ -22,10 +24,7 @@ const [searchParams] = useSearchParams();
 
   const candidateKey = searchParams.get("candidate");
 
-  useEffect(() => {
-    fetchCandidates();
-  }, []);
-
+ 
   useEffect(() => {
     localStorage.setItem("selectedCandidates", JSON.stringify(selectedCandidates));
   }, [selectedCandidates]);
@@ -37,12 +36,7 @@ const [searchParams] = useSearchParams();
     }
   }, []);
 
-  const fetchCandidates = () => {
-    fetch("http://localhost:5050/api/kandidaten")
-      .then((res) => res.json())
-      .then((data) => setCandidateList(data))
-      .catch((err) => console.error("Fout bij ophalen kandidaten:", err));
-  };
+
 
   const handleSelect = (key) => {
     if (!selectedCandidates.includes(key)) {
@@ -68,34 +62,32 @@ const [searchParams] = useSearchParams();
     setOpenForm(true);
   };
 
+
   const handleDelete = (key) => {
-    fetch(`http://localhost:5050/api/kandidaten/${key}`, { method: "DELETE" })
-      .then((res) => {
-        if (!res.ok) throw new Error("Niet gevonden");
-        return res.json();
-      })
-      .then(() => fetchCandidates())
-      .catch((err) => alert("Fout bij verwijderen: " + err.message));
-  };
+    const ok = window.confirm("Weet je zeker dat je deze kandidaat wilt verwijderen?");
+    if (!ok) return;
 
-  const handleFormSubmit = (data) => {
-    const endpoint = "http://localhost:5050/api/kandidaten";
-    const method = formMode === "edit" ? "PUT" : "POST";
-    const url = formMode === "edit" ? `${endpoint}/${selectedKey}` : endpoint;
-    const payload = formMode === "edit" ? data : { ...data, id: `id-${Date.now()}` };
-
-    fetch(url, {
-      method,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    })
-      .then((res) => res.json())
-      .then(() => {
-        fetchCandidates();
-        setOpenForm(false);
-      })
-      .catch((err) => console.error("Fout bij opslaan:", err));
+    setCandidateList(prev => {
+      const next = { ...prev };
+      delete next[key];
+      return next;
+    });
+    // Optioneel: als je ook wilt dat 'selectedCandidates' bijgewerkt wordt:
+    setSelectedCandidates(prev => prev.filter(k => k !== key));
   };
+      const handleFormSubmit = (data) => {
+        if (formMode === "edit") {
+              setCandidateList(prev => ({
+                ...prev,
+                [selectedKey]: { ...prev[selectedKey], ...data }
+              }));
+            } else {
+              const newId = `id-${Date.now()}`;
+              setCandidateList(prev => ({
+                ...prev,
+                [newId]: { ...data, id: newId }
+              }));
+            }}
 
   const filtered = Object.entries(candidateList).filter(([_, c]) => {
     const fullName = `${c.voornaam || ""} ${c.achternaam || ""}`.toLowerCase();

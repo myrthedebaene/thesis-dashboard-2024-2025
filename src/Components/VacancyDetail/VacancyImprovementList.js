@@ -8,32 +8,19 @@ import {
   Paper,
 } from "@mui/material";
 import DonutChartMini from "./DonutChartMini";
-
+import matchingArray from "../../data/matching.json";
 const AanbevelingenPerMatch = ({
   candidateId,
   vacancyId,
   onSelectAanbeveling,
   selectedAanbeveling,
 }) => {
-  const [matchData, setMatchData] = useState(null);
+  const matchData = matchingArray.find(
+        (m) => m.kandidaatId === candidateId && m.vacatureId === vacancyId
+      ) || null;
   // flag whether current selectedAanbeveling was set by click
   const clickedRef = useRef(false);
 
-  useEffect(() => {
-    const fetchMatchingData = async () => {
-      try {
-        const response = await fetch("http://localhost:5050/api/matching");
-        const data = await response.json();
-        const match = data.find(
-          (m) => m.kandidaatId === candidateId && m.vacatureId === vacancyId
-        );
-        setMatchData(match);
-      } catch (error) {
-        console.error("Fout bij ophalen matchingsdata:", error);
-      }
-    };
-    fetchMatchingData();
-  }, [candidateId, vacancyId]);
 
   const isSame = (a, b) => a && b && JSON.stringify(a) === JSON.stringify(b);
 

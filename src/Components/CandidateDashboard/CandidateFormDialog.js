@@ -85,9 +85,23 @@ const CandidateFormDialog = ({ open, onClose, onSubmit, mode, candidate }) => {
   };
 
   const handleSubmit = () => {
-    if (formErrors.email || formErrors.telefoon) return;
-    onSubmit(formData);
-  };
+        // 1) Valideer verplichte velden
+        const errors = {};
+        if (!formData.voornaam)    errors.voornaam    = "Voornaam is verplicht";
+        if (!formData.achternaam)  errors.achternaam  = "Achternaam is verplicht";
+        // (voeg hier evt. meer verplichte velden toe)
+    
+  
+    
+        // 3) Stop als er nog errors zijn
+        if (Object.values(errors).some((msg) => msg)) {
+          return;
+        }
+    
+        // 4) Sla op en sluit de dialoog
+        onSubmit(formData);
+        onClose();
+     };
 
   const handleDeleteSkill = (field, index) => {
     const updated = [...formData[field]];

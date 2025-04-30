@@ -3,7 +3,6 @@ import { Box, Grid, Paper, Typography, Button, Stack, TextField, Select, MenuIte
 import React from 'react';
 import { useState } from "react";
 import {FormControl, InputLabel} from "@mui/material";
-//import ForumIcon from "@mui/icons-material/Forum";
 import TableCandidate from "./TableCandidates";
 import CandidateFormDialog from "./CandidateFormDialog";
 const MainContent = ({

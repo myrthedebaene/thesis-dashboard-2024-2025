@@ -27,7 +27,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import vacaturesData from "../../data/vacatures.json"; 
 const TabPanel = ({ value, index, children }) => {
   return value === index && (
     <Box sx={{ mt: 3 }}>
@@ -37,7 +37,7 @@ const TabPanel = ({ value, index, children }) => {
 };
 
 const VacatureTabel = ({ newVacature }) => {
-  const [vacatures, setVacatures] = useState({});
+  const [vacatures, setVacatures] = useState(vacaturesData);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState(null);
   const [tab, setTab] = useState(0);
@@ -45,23 +45,12 @@ const VacatureTabel = ({ newVacature }) => {
   const [selectedVacature, setSelectedVacature] = useState(null);
 
   useEffect(() => {
-    if (newVacature && newVacature.id) {
-      setVacatures(prev => ({ ...prev, [newVacature.id]: newVacature }));
-    }
-  }, [newVacature]);
+        if (newVacature?.id) {
+          setVacatures(prev => ({ ...prev, [newVacature.id]: newVacature }));
+        }
+      }, [newVacature]);
 
-  useEffect(() => {
-    fetch("http://localhost:5050/api/vacatures")
-      .then(res => res.json())
-      .then(data => {
-        setVacatures(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error("Fout bij laden vacatures:", err);
-        setLoading(false);
-      });
-  }, []);
+  
 
   const handleTabChange = (event, newValue) => setTab(newValue);
 
@@ -74,28 +63,12 @@ const VacatureTabel = ({ newVacature }) => {
     const confirm = window.confirm("Ben je zeker dat je deze vacature wilt verwijderen?");
     if (!confirm) return;
 
-    try {
-      const res = await fetch(`http://localhost:5050/api/vacatures/${id}`, {
-        method: "DELETE",
-      });
-
-      if (res.ok) {
-        setVacatures(prev => {
-          const updated = { ...prev };
-          delete updated[id];
-          return updated;
+  setVacatures(prev => {
+          const next = { ...prev };
+          delete next[id];
+          return next;
         });
-      } else {
-        alert("Fout bij verwijderen van vacature");
-      }
-    } catch (err) {
-      console.error("❌ Fout bij verwijderen:", err);
-      alert("Er is een fout opgetreden bij het verwijderen.");
-    }
-  };
-
-  if (loading) return <CircularProgress />;
-
+       };
   return (
     <Box sx={{ mt: 4 }}>
       <Table size="small">

@@ -3,6 +3,9 @@ import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Box, Button, Typography, CircularProgress, Grid, Paper, Stack} from '@mui/material';
 //import { matching } from '../../Data/matching';
 //import { vacancies } from '../../Data/vacancies';
+import candidatesData from "../../data/candidates.json";
+import vacanciesData  from "../../data/vacatures.json";
+import matchingArray  from "../../data/matching.json";
 import VacancyHeader from './VacancyHeader';
 import SkillGroupBlock from './SkillGroupBlock';
 import VacancyImprovementList from './VacancyImprovementList';
@@ -15,10 +18,19 @@ import { SelectedVacanciesContext } from "../SelectedVacanciesContext";
 import SelectedVacancies from './SelectedVacancies';
 
 const VacancyDetail = () => {
-  const [vacancies, setVacancies] = useState({});
-const [matching, setMatching] = useState({});
+  const [vacancies,  setVacancies]  = useState(vacanciesData);
+  const [matching, setMatching] = useState(() => {
+    const structured = {};
+    for (const match of matchingArray) {
+      if (!structured[match.kandidaatId]) {
+        structured[match.kandidaatId] = {};
+      }
+      structured[match.kandidaatId][match.vacatureId] = match;
+    }
+    return structured;
+  });
+  const [candidates, setCandidates] = useState(candidatesData);
 
-    const [candidates, setCandidates] = useState({});
     const [selectedAanbeveling, setSelectedAanbeveling] = useState(null);
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
@@ -31,30 +43,8 @@ const [matching, setMatching] = useState({});
     const vacancyData = vacancies[vacancyId] || null;
 
     const [selectedVacanciesAll, setSelectedVacanciesAll] = useContext(SelectedVacanciesContext);
-// Vacatures ophalen
-useEffect(() => {
-  fetch("http://localhost:5050/api/vacatures")
-    .then(res => res.json())
-    .then(data => setVacancies(data))
-    .catch(err => console.error("❌ Fout bij ophalen vacatures:", err));
-}, []);
 
-// Matchings ophalen
-useEffect(() => {
-  fetch("http://localhost:5050/api/matching")
-    .then(res => res.json())
-    .then(data => {
-      const structured = {};
-      for (const match of data) {
-        if (!structured[match.kandidaatId]) {
-          structured[match.kandidaatId] = {};
-        }
-        structured[match.kandidaatId][match.vacatureId] = match;
-      }
-      setMatching(structured);
-    })
-    .catch(err => console.error("❌ Fout bij ophalen matchings:", err));
-}, []);
+
 
     useEffect(() => {
       const stored = localStorage.getItem("selectedCandidates");
@@ -64,28 +54,6 @@ useEffect(() => {
       }
     }, []);
 
-    useEffect(() => {
-      if (selectedCandidates.length === 0) return;
-
-      const fetchAllCandidates = async () => {
-        const candidateMap = {};
-
-        for (const id of selectedCandidates) {
-          try {
-            const res = await fetch(`http://localhost:5050/api/kandidaten/${id}`);
-            if (!res.ok) throw new Error(`Niet gevonden: ${id}`);
-            const data = await res.json();
-            candidateMap[id] = data;
-          } catch (err) {
-            console.error(`Fout bij ophalen ${id}:`, err.message);
-          }
-        }
-
-        setCandidates(candidateMap);
-      };
-
-      fetchAllCandidates();
-    }, [selectedCandidates]);
 
     const handleRemoveCandidate = (key) => {
       setSelectedCandidates((prev) => prev.filter((k) => k !== key));

@@ -93,26 +93,12 @@ const VacatureEditDialog = ({ open, onClose, vacature, onSave }) => {
     setForm(updated);
   };
 
-  const handleSave = async () => {
-    try {
-      const res = await fetch(`http://localhost:5050/api/vacatures/${form.id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-      if (res.ok) {
-        const updated = await res.json();
-        onSave(updated);
+  const handleSave = () => {
+        // stuur het gewijzigde object terug naar de parent
+        onSave(form);
+        // sluit de dialog
         onClose();
-      } else {
-        alert("Fout bij opslaan van vacature");
-      }
-    } catch (err) {
-      console.error("❌ Fout bij bewerken:", err);
-      alert("Er is een fout opgetreden bij het bewerken.");
-    }
-  };
+      };
 
   const renderCompetentie = (categorie) => (
     <Box>

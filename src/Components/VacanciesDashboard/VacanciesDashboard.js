@@ -9,15 +9,28 @@ import MainContent from "./MainContent";
 import Header from "./Header";
 import { SelectedCandidatesContext } from "../SelectedCandidatesContext";
 import { SelectedVacanciesContext } from "../SelectedVacanciesContext";
+// voeg bovenaan toe (pad aanpassen indien nodig)
+import candidatesData from "../../data/candidates.json";
+import vacanciesData  from "../../data/vacatures.json";
+import matchingArray  from "../../data/matching.json";
 
 const VacanciesDashboard = () => {
-  const [candidates, setCandidates] = useState({});
+  const [candidates, setCandidates] = useState(candidatesData);
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const { selectedCandidates, setSelectedCandidates } = useContext(SelectedCandidatesContext);
 
-  const [vacancies, setVacancies] = useState({});
-  const [matching, setMatching] = useState({});
+  const [vacancies, setVacancies] = useState(vacanciesData)
+  const [matching, setMatching] = useState(() => {
+    const structured = {};
+    for (const match of matchingArray) {
+      if (!structured[match.kandidaatId]) {
+        structured[match.kandidaatId] = {};
+      }
+      structured[match.kandidaatId][match.vacatureId] = match;
+    }
+    return structured;
+  });
 
   const vacancyKey = searchParams.get("vacatureId");
   const vacancy = vacancies[vacancyKey];
@@ -28,36 +41,9 @@ const selectedVacancies = selectedVacanciesAll[candidateKey] || [];
 
 console.log("candidate",candidate)
 
-useEffect(() => {
-  fetch("http://localhost:5050/api/matching")
-    .then(res => res.json())
-    .then(data => {
-      // data is een array van matchresultaten: [{ kandidaatId, vacatureId, ... }, ...]
-      // We structureren het als: matching[kandidaatId][vacatureId] = match
-      const structured = {};
-      for (const match of data) {
-        if (!structured[match.kandidaatId]) {
-          structured[match.kandidaatId] = {};
-        }
-        structured[match.kandidaatId][match.vacatureId] = match;
-      }
-      setMatching(structured);
-    })
-    .catch(err => {
-      console.error("❌ Fout bij ophalen matchings:", err);
-    });
-}, []);
 
-useEffect(() => {
-  fetch("http://localhost:5050/api/vacatures")
-    .then((res) => res.json())
-    .then((data) => {
-      setVacancies(data);
-    })
-    .catch((err) => {
-      console.error("❌ Fout bij ophalen vacatures:", err);
-    });
-}, []);
+
+
 
   useEffect(() => {
     localStorage.setItem("selectedVacancies", JSON.stringify(selectedVacanciesAll));
@@ -87,31 +73,6 @@ useEffect(() => {
 
 
 
-// 2. Elke keer als selectedCandidates verandert → haal data op
-useEffect(() => {
-  // console.log("🔁 selectedCandidates veranderd:", selectedCandidates);  // Log toevoegen
-  if (selectedCandidates.length === 0) return;
-
-  const fetchAllCandidates = async () => {
-    const candidateMap = {};
-
-    for (const id of selectedCandidates) {
-      try {
-        const res = await fetch(`http://localhost:5050/api/kandidaten/${id}`);
-        if (!res.ok) throw new Error(`Niet gevonden: ${id}`);
-        const data = await res.json();
-        candidateMap[id] = data;
-      } catch (err) {
-        console.error(`Fout bij ophalen ${id}:`, err.message);
-      }
-    }
-
-    // console.log("✅ Gevulde candidateMap:", candidateMap);  // Log van de gevulde kandidaten
-    setCandidates(candidateMap);
-  };
-
-  fetchAllCandidates();
-}, [selectedCandidates]);
 
 
   // === Filter state ===

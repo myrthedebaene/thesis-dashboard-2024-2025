@@ -18,6 +18,7 @@ const VacancyList = ({
   onSelectVacancy,
   showDetails,
 }) => {
+  console.log("test",matching[candidateKey])
   if (!candidateKey) return null;
 
   // Sorteer op drempelwaarde behaald, daarna op matchingscore
@@ -44,12 +45,7 @@ const VacancyList = ({
             const vacancy = vacancies[vacancyId];
             const match = matching[candidateKey][vacancyId];
             const threshold = Number(vacancy.threshold?.replace("%", ""));
-            const avgWorker = Math.round(
-              (match.vaardighedenBarchart.average +
-                match.kennisBarchart.average +
-                match.attitudeEnPersoonlijkeKenmerkenBarchart.average) /
-                3
-            );
+            
             const improvement = match.verbeterPotentieel || 0;
 
             return (
@@ -96,7 +92,7 @@ const VacancyList = ({
                     >
                       <DonutChart
                         score={match.matchScore}
-                        average={avgWorker}
+                       
                         verbetering={improvement}
                         threshold={threshold}
                       />
