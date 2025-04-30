@@ -28,7 +28,7 @@ const Sidebar = ({
   activeCandidateKey
 }) => {
 
-
+  console.log("selected candidates", selectedCandidates)
 
   const navigate = useNavigate();
   

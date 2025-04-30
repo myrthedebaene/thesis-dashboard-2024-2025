@@ -26,6 +26,7 @@ const CandidateSidebar = ({
   onSelectCandidate,
   activeCandidateKey
 }) => {
+  console.log("selected candidates", selectedCandidates)
   const navigate = useNavigate();
 
   const handleGoToCandidatePage = () => {

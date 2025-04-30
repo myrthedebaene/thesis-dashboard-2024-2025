@@ -43,6 +43,11 @@ console.log("candidate",candidate)
 
 
 
+useEffect(() => {
+  if (candidateKey && selectedCandidates.length === 0) {
+    setSelectedCandidates([candidateKey]);
+  }
+}, [candidateKey, selectedCandidates, setSelectedCandidates]);
 
 
   useEffect(() => {
@@ -54,7 +59,7 @@ console.log("candidate",candidate)
     if (stored) {
       setSelectedVacanciesAll(JSON.parse(stored));
     }
-  }, []);
+  }, [setSelectedVacanciesAll]);
   
 // Laad geselecteerde kandidaten uit localStorage en haal bijbehorende data op uit API
 
@@ -69,7 +74,7 @@ useEffect(() => {
   } else {
     //console.log("EEN geselecteerde kandidaten in localStorage");
   }
-}, []);
+}, [setSelectedCandidates]);
 
 
 
