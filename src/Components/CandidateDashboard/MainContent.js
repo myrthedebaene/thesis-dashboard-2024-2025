@@ -3,7 +3,7 @@ import { Box, Grid, Paper, Typography, Button, Stack, TextField, Select, MenuIte
 import React from 'react';
 import { useState } from "react";
 import {FormControl, InputLabel} from "@mui/material";
-import ForumIcon from "@mui/icons-material/Forum";
+//import ForumIcon from "@mui/icons-material/Forum";
 import TableCandidate from "./TableCandidates";
 import CandidateFormDialog from "./CandidateFormDialog";
 const MainContent = ({
@@ -33,7 +33,7 @@ const handleView = (id, candidate) => {
             <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 1, mb: 1, border: "1px solid #ccc", borderRadius: "4px" }}>
                 <Typography variant="h4">Kandidaten</Typography>
                 <Button variant="contained" onClick={handleAdd}>
-                <ForumIcon sx={{ mr: 1 }} /> Kandidaat Toevoegen
+                Kandidaat Toevoegen
             </Button>
             </Box>
             
