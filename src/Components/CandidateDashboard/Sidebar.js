@@ -10,12 +10,7 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemText,
-  ListItemIcon,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
+  ListItemText
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { getInitials } from "./Helpers";

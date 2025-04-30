@@ -2,14 +2,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate, useSearchParams} from "react-router-dom";
 import { SelectedCandidatesContext } from "../SelectedCandidatesContext";
-import { Box, Grid, Paper, Typography, Button, Stack, TextField, Select, MenuItem } from "@mui/material";
-import ForumIcon from "@mui/icons-material/Forum";
+import { Box, Stack } from "@mui/material";
 import MainContent from "./MainContent";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-import CandidateFormDialog from "./CandidateFormDialog";
-import TableCandidate from "./TableCandidates";
-
 
 const CandidateDashboard = () => {
   const [candidateList, setCandidateList] = useState({});
