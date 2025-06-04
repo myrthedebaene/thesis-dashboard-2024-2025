@@ -5,6 +5,7 @@ import {
   TableCell,
   Chip,
   TableContainer,
+  Grid,
   TableHead,
   TableRow,
   Paper,
@@ -29,48 +30,29 @@ const TableCandidate = ({ candidates, onSelect, onEdit, onDelete }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleView = (key, candidate) => {
-    if (!candidate.vaardigheden) {
-      candidate.vaardigheden = [
-        { skill: "Microsoft Excel", niveau: "Level 3 – Goed", opmerking: "Gebruikt regelmatig draaitabellen en formules." },
-        { skill: "SAP", niveau: "Level 2 – Basis", opmerking: "Heeft beperkte ervaring met het invoeren van orders." }
-      ]
-    };
-    if (!candidate.kennis) {
-      candidate.kennis = [
-        { skill: "Nederlands", niveau: "Level 4 – Zeer goed", opmerking: "Spreekt en schrijft foutloos Nederlands." },
-        { skill: "Engels", niveau: "Level 3 – Goed", opmerking: "Kan vlot communiceren over werkgerelateerde onderwerpen." }
-      ]
-    };
-
-    if (!candidate.attitudeEnPersoonlijk) {
-      candidate.attitudeEnPersoonlijk = [
-        { skill: "Leergierigheid", niveau: "Level 4 – Sterk", opmerking: "Gaf aan graag nieuwe tools te verkennen en bij te leren." },
-        { skill: "Samenwerken", niveau: "Level 3 – Goed", opmerking: "Vertelde over succesvolle teamprojecten." }
-      ]
-    };
-
-    if (!candidate.ervaring) {
-      candidate.ervaring = "3 jaar als administratief medewerker bij een ziekenhuis.";
-    }
-    if (!candidate.hobbys) {
-      candidate.hobbys = "Lezen, koken, padel.";
-    }
-    if (!candidate.interesses) {
-      candidate.interesses = "Gezondheidszorg, digitale tools, vrijwilligerswerk.";
-    }
-    if (!candidate.attesten) {
-      candidate.attesten = "VCA attest, rijbewijs B.";
-    }
 
     setSelectedCandidate(candidate);
     setActiveTab(0);
   };
-
+  const InfoBlock = ({ icon, label, value }) => (
+    <Box>
+      <Typography variant="subtitle2" fontWeight={600}>
+        {icon} {label}
+      </Typography>
+      <Typography variant="body2" color={value ? "text.primary" : "text.secondary"}>
+        {value || "Niet ingevuld"}
+      </Typography>
+    </Box>
+  );
+  
   const handleCloseDialog = () => {
     setSelectedCandidate(null);
   };
 
-  const tabLabels = ["Vaardigheden", "Kennis", "Attitude & Persoonlijk", "Andere"];
+  const tabLabels = ["Algemeen", "Vaardigheden", "Attitude & Persoonlijk", "Andere"];
+  const [sortField, setSortField] = useState("naam");
+  const [sortOrder, setSortOrder] = useState("asc");
+  
 
   const renderCompetenties = (categorie) => (
     <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, mt: 2 }}>
@@ -90,11 +72,47 @@ const TableCandidate = ({ candidates, onSelect, onEdit, onDelete }) => {
         <Table stickyHeader>
           <TableHead>
             <TableRow>
-              <TableCell>Naam</TableCell>
+            <TableCell
+  sx={{ cursor: "pointer", userSelect: "none" }}
+  onClick={() => {
+    if (sortField === "naam") {
+      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+    } else {
+      setSortField("naam");
+      setSortOrder("asc");
+    }
+  }}
+>
+  <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+    Naam
+    <Typography variant="body2" component="span" color="text.secondary">
+      {sortField === "naam" ? (sortOrder === "asc" ? "▲" : "▼") : "⇅"}
+    </Typography>
+  </Box>
+</TableCell>
+
               <TableCell>Geslacht</TableCell>
               <TableCell>Geboortedatum</TableCell>
               <TableCell>Adres</TableCell>
-              <TableCell>Status</TableCell>
+              <TableCell
+  sx={{ cursor: "pointer", userSelect: "none" }}
+  onClick={() => {
+    if (sortField === "status") {
+      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+    } else {
+      setSortField("status");
+      setSortOrder("asc");
+    }
+  }}
+>
+  <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+    Status
+    <Typography variant="body2" component="span" color="text.secondary">
+      {sortField === "status" ? (sortOrder === "asc" ? "▲" : "▼") : "⇅"}
+    </Typography>
+  </Box>
+</TableCell>
+
               <TableCell>Contact</TableCell>
               <TableCell>Details</TableCell>
               <TableCell>Acties</TableCell>
@@ -102,7 +120,28 @@ const TableCandidate = ({ candidates, onSelect, onEdit, onDelete }) => {
           </TableHead>
           <TableBody>
             {candidates.length > 0 ? (
-              candidates.map(([key, candidate]) => {
+            [...candidates]
+            .sort((a, b) => {
+              const getValue = (c) => {
+                const data = c[1];
+                if (sortField === "naam") {
+                  return `${data.voornaam || ""} ${data.achternaam || ""}`.toLowerCase();
+                }
+                if (sortField === "status") {
+                  return (data.status || "").toLowerCase();
+                }
+                return "";
+              };
+              const valA = getValue(a);
+              const valB = getValue(b);
+              return sortOrder === "asc"
+                ? valA.localeCompare(valB, "nl")
+                : valB.localeCompare(valA, "nl");
+            })
+            .map(([key, candidate]) => {
+          
+           
+            
                 const fullName = `${candidate.voornaam || ""} ${candidate.achternaam || ""}`.trim();
                 const adres = candidate.straat && candidate.nummer && candidate.postcode && candidate.stad && candidate.land
                   ? `${candidate.straat}, ${candidate.nummer}, ${candidate.postcode}, ${candidate.stad}, ${candidate.land}`
@@ -167,9 +206,41 @@ const TableCandidate = ({ candidates, onSelect, onEdit, onDelete }) => {
               <Tab key={idx} label={label} />
             ))}
           </Tabs>
+          {activeTab === 0 && (
+            <Grid container spacing={2} sx={{ mt: 2 }}>
+  <Grid item xs={12} sm={6} md={4}>
+    <InfoBlock icon="👤" label="Naam" value={`${selectedCandidate?.voornaam} ${selectedCandidate?.achternaam}`} />
+  </Grid>
+  <Grid item xs={12} sm={6} md={4}>
+    <InfoBlock icon="🎂" label="Geboortedatum" value={selectedCandidate?.geboortedatum} />
+  </Grid>
+  <Grid item xs={12} sm={6} md={4}>
+    <InfoBlock icon="👥" label="Geslacht" value={selectedCandidate?.geslacht} />
+  </Grid>
+  <Grid item xs={12} sm={6} md={4}>
+    <InfoBlock icon="🌍" label="Nationaliteit" value={selectedCandidate?.nationaliteit} />
+  </Grid>
+  <Grid item xs={12} sm={6} md={4}>
+    <InfoBlock icon="📌" label="Status" value={selectedCandidate?.status} />
+  </Grid>
+  <Grid item xs={12} sm={6} md={4}>
+    <InfoBlock icon="📞" label="Telefoon" value={selectedCandidate?.telefoon} />
+  </Grid>
+  <Grid item xs={12} sm={6} md={4}>
+    <InfoBlock icon="📧" label="Email" value={selectedCandidate?.email} />
+  </Grid>
+  <Grid item xs={12} sm={12} md={8}>
+    <InfoBlock
+      icon="🏠"
+      label="Adres"
+      value={`${selectedCandidate?.straat || ""} ${selectedCandidate?.nummer || ""}, ${selectedCandidate?.postcode || ""} ${selectedCandidate?.stad || ""}, ${selectedCandidate?.land || ""}`}
+    />
+  </Grid>
+</Grid>
 
-          {activeTab === 0 && renderCompetenties("vaardigheden")}
-          {activeTab === 1 && renderCompetenties("kennis")}
+)}
+
+          {activeTab === 1 && renderCompetenties("vaardigheden")}
           {activeTab === 2 && (
             <>
               {renderCompetenties("attitudeEnPersoonlijk")}
@@ -190,9 +261,19 @@ const TableCandidate = ({ candidates, onSelect, onEdit, onDelete }) => {
                 <Typography variant="body2">{selectedCandidate?.interesses || "Geen interesses bekend."}</Typography>
               </Box>
               <Box>
-                <Typography variant="subtitle2" fontWeight={600} gutterBottom>📄 Attesten</Typography>
-                <Typography variant="body2">{selectedCandidate?.attesten || "Geen attesten opgegeven."}</Typography>
-              </Box>
+  <Typography variant="subtitle2" fontWeight={600} gutterBottom>
+    📄 Attesten en diploma's
+  </Typography>
+
+  <Typography variant="body2">
+    <strong>Attesten:</strong> {selectedCandidate?.attesten || "Geen attesten opgegeven."}
+  </Typography>
+
+  <Typography variant="body2">
+    <strong>Diploma:</strong> {selectedCandidate?.diploma || "Geen diploma's opgegeven."}
+  </Typography>
+</Box>
+
             </Box>
           )}
         </DialogContent>

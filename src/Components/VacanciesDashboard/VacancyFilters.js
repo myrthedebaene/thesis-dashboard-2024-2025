@@ -19,6 +19,7 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CloseIcon from "@mui/icons-material/Close";
 
+
 const ClickDialog = ({ children, title }) => {
   const [open, setOpen] = useState(false);
 
@@ -36,14 +37,33 @@ const ClickDialog = ({ children, title }) => {
         onClick={handleOpen}
         sx={{ color: 'text.secondary', cursor: 'pointer', ml: 1 }}
       />
-      <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth scroll="paper">
-        <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          {title}
+   <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth scroll="paper">
+        <DialogTitle
+          sx={{
+            p: 2,
+            bgcolor: "#f0f0f0",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <Typography variant="h6">{title}</Typography>
           <IconButton onClick={handleClose} size="small">
             <CloseIcon />
           </IconButton>
         </DialogTitle>
-        <DialogContent dividers>{children}</DialogContent>
+        <DialogContent
+          dividers
+          sx={{
+            bgcolor: "#fafafa",
+            px: 3,
+            py: 2,
+            borderBottomLeftRadius: 8,
+            borderBottomRightRadius: 8,
+          }}
+        >
+          {children}
+        </DialogContent>
       </Dialog>
     </>
   );

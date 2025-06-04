@@ -37,7 +37,19 @@ const VacancyHeader = ({ vacancyData, matchData, selectedAanbeveling }) => {
             <InfoItem label="Bedrijf" value={vacancyData.bedrijf} gridSize={1.5} />
             <InfoItem label="Contract" value={vacancyData.contract} gridSize={1} />
             <InfoItem label="Werkregime" value={vacancyData.werkregime} gridSize={1} />
-            <InfoItem label="Tijdregeling" value={vacancyData.tijdregeling} gridSize={1} />
+            <InfoItem label="Tijdregeling" 
+  value={
+    Array.isArray(vacancyData.tijdregeling)
+      ? vacancyData.tijdregeling.map((item, i) => (
+          <React.Fragment key={i}>
+            {item}
+            {i < vacancyData.tijdregeling.length - 1 && <br />}
+          </React.Fragment>
+        ))
+      : vacancyData.tijdregeling
+  }
+
+ gridSize={1} />
             <InfoItem
               label="Woon-werk afstand"
               value={matchData.afstand || "Onbekend"}

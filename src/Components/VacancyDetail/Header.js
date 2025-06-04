@@ -107,7 +107,7 @@ const Header = ({
         width: '100%',
         alignItems: { xs: 'flex-start', md: 'center' },
         justifyContent: 'space-between',
-        maxWidth: { sm: '100%', md: '1700px' },
+      //  maxWidth: { sm: '100%', md: '1700px' },
         pt: 0,
       }}
       spacing={2}

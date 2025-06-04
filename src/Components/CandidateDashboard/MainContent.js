@@ -2,6 +2,7 @@
 import { Box, Grid, Paper, Typography, Button, Stack, TextField, Select, MenuItem } from "@mui/material";
 import React from 'react';
 import { useState } from "react";
+import ForumIcon from "@mui/icons-material/Forum";
 import {FormControl, InputLabel} from "@mui/material";
 import TableCandidate from "./TableCandidates";
 import CandidateFormDialog from "./CandidateFormDialog";
@@ -32,7 +33,7 @@ const handleView = (id, candidate) => {
             <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 1, mb: 1, border: "1px solid #ccc", borderRadius: "4px" }}>
                 <Typography variant="h4">Kandidaten</Typography>
                 <Button variant="contained" onClick={handleAdd}>
-                Kandidaat Toevoegen
+                <ForumIcon sx={{ mr: 1 }} /> Kandidaat Toevoegen
             </Button>
             </Box>
             

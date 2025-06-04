@@ -1,4 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  IconButton,
+  Tooltip,
+} from "@mui/material";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import CloseIcon from "@mui/icons-material/Close";
+
 import {
   Box,
   Typography,
@@ -21,8 +32,44 @@ const AanbevelingenPerMatch = ({
   // flag whether current selectedAanbeveling was set by click
   const clickedRef = useRef(false);
 
-
+  const UitlegDialog = ({ open, onClose }) => (
+    <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
+      <DialogTitle
+        sx={{
+          p: 2,
+          bgcolor: "#f0f0f0",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <Typography variant="h6">Hoe lees je de component "Aanbevelingen"?</Typography>
+        <IconButton onClick={onClose} size="small">
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
+      <DialogContent dividers sx={{ bgcolor: "#fafafa", px: 3, py: 2 }}>
+        <Typography variant="subtitle2" gutterBottom>
+          <strong>Wat toont de grafiek?</strong>
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          • De donut geeft aan hoeveel procent verbetering een aanbeveling heeft op de matching score.<br />
+          • Elke aanbeveling stelt een actie voor die de kandidaat kan ondernemen om bepaalde competenties te verbeteren.<br />
+        </Typography>
+        <Typography variant="subtitle2" gutterBottom>
+          <strong>Hoe gebruik je deze info?</strong>
+        </Typography>
+        <Typography variant="body2">
+        • Klik op een aanbeveling om het effect op de matching score te zien.<br />
+        • Klik op een aanbeveling om te zien op welke competenties het een impact heeft.<br />
+        </Typography>
+      </DialogContent>
+    </Dialog>
+  );
+  
   const isSame = (a, b) => a && b && JSON.stringify(a) === JSON.stringify(b);
+  const [openDialog, setOpenDialog] = useState(false);
+  
 
   const handleClick = (entry) => {
     if (!onSelectAanbeveling) return;
@@ -71,9 +118,14 @@ const AanbevelingenPerMatch = ({
           flexDirection: "column",
         }}
       >
-        <Typography variant="h6" sx={{ mb: 1 }}>
-          Aanbevelingen
-        </Typography>
+         {/* Titel + helpicoon rechtsboven */}
+    <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 1 }}>
+      <Typography variant="h6">Aanbevelingen</Typography>
+      <IconButton size="small" onClick={() => setOpenDialog(true)}>
+        <HelpOutlineIcon fontSize="small" />
+      </IconButton>
+    </Box>
+
         <List
           sx={{
             flexGrow: 1,
@@ -145,6 +197,9 @@ const AanbevelingenPerMatch = ({
             );
           })}
         </List>
+        <UitlegDialog open={openDialog} onClose={() => setOpenDialog(false)} />
+
+
       </Paper>
     </Box>
   );

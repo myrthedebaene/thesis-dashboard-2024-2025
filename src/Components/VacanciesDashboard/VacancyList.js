@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Paper,
   Grid,
@@ -9,6 +8,10 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import BarChart from "./Charts/BarChart";
 import DonutChart from "./Charts/DonutChart";
+import React, { useState } from "react"; // <-- dit is correct
+import { ToggleButtonGroup, ToggleButton } from "@mui/material"; // apart houden
+
+
 
 const VacancyList = ({
   candidateKey,
@@ -16,10 +19,17 @@ const VacancyList = ({
   matching,
   filteredVacancyIds,
   onSelectVacancy,
+  chartVariant,
   showDetails,
 }) => {
-  console.log("test",matching[candidateKey])
+  console.log(vacancies)
   if (!candidateKey) return null;
+  const getColorCategory = (score, threshold) => {
+    if (score >= threshold) return 0; // groen
+    if (threshold - score < 10) return 1; // oranje
+    return 2; // rood
+  };
+
 
   // Sorteer op drempelwaarde behaald, daarna op matchingscore
   const sortedVacancyIds = filteredVacancyIds.slice().sort((a, b) => {
@@ -27,25 +37,35 @@ const VacancyList = ({
     const matchB = matching[candidateKey][b];
     const thresholdA = parseFloat(vacancies[a].threshold?.replace("%", "")) || 0;
     const thresholdB = parseFloat(vacancies[b].threshold?.replace("%", "")) || 0;
-    const passedA = matchA.matchScore >= thresholdA;
-    const passedB = matchB.matchScore >= thresholdB;
-    // Vacatures die de drempel behalen eerst
-    if (passedA !== passedB) {
-      return passedA ? -1 : 1;
+    const catA = getColorCategory(matchA.matchScore, thresholdA);
+    const catB = getColorCategory(matchB.matchScore, thresholdB);
+    if (catA !== catB) {
+      return catA - catB;
     }
-    // Daarna op matchingscore aflopend
+    // zelfde kleur: hoogste score eerst
     return matchB.matchScore - matchA.matchScore;
   });
 
   return (
     <Paper sx={{ p: 1 }}>
+     
+
       <Grid container spacing={2}>
+
         {sortedVacancyIds.length > 0 ? (
           sortedVacancyIds.map((vacancyId) => {
             const vacancy = vacancies[vacancyId];
-            const match = matching[candidateKey][vacancyId];
+            if (!vacancy) return null;
+
+            const match = matching?.[candidateKey]?.[vacancyId];
+if (!match) return null; // of continue; als je in een loop zit
+
             const threshold = Number(vacancy.threshold?.replace("%", ""));
-            
+            const avgWorker = Math.round(
+              (match.vaardighedenBarchart.average +
+                match.attitudeEnPersoonlijkeKenmerkenBarchart.average) /
+                3
+            );
             const improvement = match.verbeterPotentieel || 0;
 
             return (
@@ -92,7 +112,7 @@ const VacancyList = ({
                     >
                       <DonutChart
                         score={match.matchScore}
-                       
+                        average={avgWorker}
                         verbetering={improvement}
                         threshold={threshold}
                       />
@@ -180,11 +200,6 @@ const VacancyList = ({
                           threshold: vacancy.vaardighedenBarchartThreshold,
                         },
                         {
-                          label: "Kennis",
-                          data: match.kennisBarchart,
-                          threshold: vacancy.kennisBarchartThreshold,
-                        },
-                        {
                           label: "Attitudes & Karakter",
                           data:
                             match.attitudeEnPersoonlijkeKenmerkenBarchart,
@@ -211,6 +226,7 @@ const VacancyList = ({
                                 improvement={parseInt(
                                   item.data.verbetering.replace("%", "")
                                 )}
+                                variant={chartVariant}
                               />
                             </Box>
                           </Grid>

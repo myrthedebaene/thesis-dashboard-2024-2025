@@ -34,9 +34,18 @@ const CandidateSidebar = ({
   };
 
   const handleRemoveAndGoToDashboard = (key) => {
+    // Haal huidige uit localStorage
+    const stored = JSON.parse(localStorage.getItem("selectedCandidates") || "[]");
+    const updated = stored.filter((k) => k !== key);
+    localStorage.setItem("selectedCandidates", JSON.stringify(updated));
+  
+    // Verwijder ook uit state
     onRemoveCandidate(key);
+  
+    // Dan pas navigeren
     navigate(`/`);
   };
+  
 
   return (
     <Drawer

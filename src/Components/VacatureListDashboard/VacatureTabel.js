@@ -119,7 +119,6 @@ const VacatureTabel = ({ newVacature }) => {
           <Tabs value={tab} onChange={handleTabChange} variant="scrollable" scrollButtons="auto">
             <Tab label="Algemeen" icon={<InfoIcon />} iconPosition="start" />
             <Tab label="Vaardigheden" icon={<WorkIcon />} iconPosition="start" />
-            <Tab label="Kennis" icon={<SchoolIcon />} iconPosition="start" />
             <Tab label="Attitude" icon={<PsychologyIcon />} iconPosition="start" />
             <Tab label="Extra" icon={<AddCommentIcon />} iconPosition="start" />
           </Tabs>
@@ -149,22 +148,8 @@ const VacatureTabel = ({ newVacature }) => {
             ))}
           </TabPanel>
 
+          
           <TabPanel value={tab} index={2}>
-            {selected?.kennis?.map((k, i) => (
-              <Paper key={i} sx={{ p: 2, mb: 2, borderRadius: 2, backgroundColor: "#f9f9f9" }}>
-                <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>{k.name}</Typography>
-                <Typography variant="body2" sx={{ mb: 1 }}>
-                  Gevraagd: <strong>{k.threshold}</strong> – Gemiddeld: <strong>{k.gemiddelde}</strong>
-                </Typography>
-                <Divider sx={{ mb: 1 }} />
-                {Object.entries(k.levels).map(([level, desc]) => (
-                  <Typography key={level} variant="body2"><strong>{level}:</strong> {desc}</Typography>
-                ))}
-              </Paper>
-            ))}
-          </TabPanel>
-
-          <TabPanel value={tab} index={3}>
             {selected?.attitudeEnPersoonlijkeKenmerken?.map((a, i) => (
               <Paper key={i} sx={{ p: 2, mb: 2, borderRadius: 2, backgroundColor: "#f9f9f9" }}>
                 <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>{a.name}</Typography>
@@ -179,7 +164,7 @@ const VacatureTabel = ({ newVacature }) => {
             ))}
           </TabPanel>
 
-          <TabPanel value={tab} index={4}>
+          <TabPanel value={tab} index={3}>
             <Typography sx={{ whiteSpace: 'pre-line' }}>
               {selected?.extra || "-"}
             </Typography>

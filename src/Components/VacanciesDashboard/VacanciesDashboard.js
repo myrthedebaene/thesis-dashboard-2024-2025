@@ -38,16 +38,20 @@ const VacanciesDashboard = () => {
   const candidate = candidates[candidateKey];
   const [selectedVacanciesAll, setSelectedVacanciesAll] = useContext(SelectedVacanciesContext);
 const selectedVacancies = selectedVacanciesAll[candidateKey] || [];
+const [hasLoadedCandidatesFromStorage, setHasLoadedCandidatesFromStorage] = useState(false);
 
 console.log("candidate",candidate)
 
 
-
 useEffect(() => {
-  if (candidateKey && selectedCandidates.length === 0) {
-    setSelectedCandidates([candidateKey]);
+  if (
+    hasLoadedCandidatesFromStorage &&
+    candidateKey &&
+    !selectedCandidates.includes(candidateKey)
+  ) {
+    setSelectedCandidates((prev) => [...prev, candidateKey]);
   }
-}, [candidateKey, selectedCandidates, setSelectedCandidates]);
+}, [hasLoadedCandidatesFromStorage, candidateKey, selectedCandidates, setSelectedCandidates]);
 
 
   useEffect(() => {
@@ -59,7 +63,7 @@ useEffect(() => {
     if (stored) {
       setSelectedVacanciesAll(JSON.parse(stored));
     }
-  }, [setSelectedVacanciesAll]);
+  }, []);
   
 // Laad geselecteerde kandidaten uit localStorage en haal bijbehorende data op uit API
 
@@ -69,14 +73,16 @@ useEffect(() => {
   if (stored) {
     const selected = JSON.parse(stored);
     // log("GEVONDEN IN LOCALSTORAGE:", selected);
-    setSelectedCandidates(selected);  // Hier ook loggen direct na `setSelectedCandidates`
-    //console.log("selectedCandidates na set:", selected);
-  } else {
-    //console.log("EEN geselecteerde kandidaten in localStorage");
-  }
-}, [setSelectedCandidates]);
+    setSelectedCandidates(selected);  
+    console.log("selectedCandidates na set:", selected);
+  } 
+  setHasLoadedCandidatesFromStorage(true);
+}, []);
 
 
+useEffect(() => {
+  localStorage.setItem("selectedCandidates", JSON.stringify(selectedCandidates));
+}, [selectedCandidates]);
 
 
 

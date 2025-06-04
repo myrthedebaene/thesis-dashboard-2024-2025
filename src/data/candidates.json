@@ -1,0 +1,633 @@
+{
+  "id-123456854": {
+    "id": "id-123456854",
+    "werkervaring": "<1 jaar",
+    "voornaam": "Lotte",
+    "achternaam": "Van Dijk",
+    "geslacht": "Vrouw",
+    "straat": "Stationstraat",
+    "nummer": "20",
+    "postcode": "3800",
+    "stad": "Sint-Truiden",
+    "land": "België",
+    "status": "Actief",
+    "telefoon": "0411221324",
+    "email": "lotte.vandijk@example.com",
+    "nationaliteit": "België",
+    "extraInfo": "",
+    "geboortedatum": "20-01-2001",
+    "diploma": "Secundair",
+    "vaardigheden": [
+      {
+        "skill": "Microsoft Excel",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Gebruikt regelmatig draaitabellen en formules."
+      },
+      {
+        "skill": "SAP",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Heeft beperkte ervaring met het invoeren van orders."
+      },
+      {
+        "skill": "Nederlands",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Spreekt en schrijft foutloos Nederlands."
+      },
+      {
+        "skill": "Engels",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Kan vlot communiceren over werkgerelateerde onderwerpen."
+      },
+      {
+        "skill": "Huishouden",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "2 jaar ervaring"
+      }
+    ],
+    "attitudeEnPersoonlijk": [
+      {
+        "skill": "Leergierigheid",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Gaf aan graag nieuwe tools te verkennen en bij te leren."
+      },
+      {
+        "skill": "Samenwerken",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Vertelde over succesvolle teamprojecten."
+      },
+      {
+        "skill": "Stressbestendigheid",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Blijft kalm in drukke situaties, gaf concrete voorbeelden."
+      },
+      {
+        "skill": "Zelfvertrouwen",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Nog onzeker bij nieuwe opdrachten, maar toont groei."
+      }
+    ],
+    "ervaring": "3 jaar als administratief medewerker bij een ziekenhuis, 2 jaar huishoudhulp",
+    "hobbys": "Lezen, koken, padel",
+    "interesses": "Gezondheidszorg, digitale tools, vrijwilligerswerk.",
+    "attesten": "VCA attest, rijbewijs B"
+  },
+  "id-98765433456789": {
+    "id": "id-98765433456789",
+    "werkervaring": "<1 jaar",
+    "voornaam": "Jasper",
+    "achternaam": "Meijer",
+    "geslacht": "Man",
+    "straat": "Veldweg",
+    "nummer": "20",
+    "postcode": "2000",
+    "stad": "Antwerpen",
+    "land": "België",
+    "status": "Actief",
+    "telefoon": "0411221324",
+    "email": "jasper.meijer@example.com",
+    "extraInfo": "Werkloos na langdurige inactiviteit (ziekte)",
+    "geboortedatum": "11-04-1980",
+    "diploma": "Geen",
+    "vaardigheden": [
+      {
+        "skill": "Nederlands",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Beperkte kennis, eenvoudige gesprekken"
+      },
+      {
+        "skill": "Heftruckbesturing",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Ervaring 1 jaar"
+      },
+      {
+        "skill": "Eenvoudige montage",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Ervaring 1 jaar"
+      },
+      {
+        "skill": "Digitale vaardigheden",
+        "niveau": "Level 1 – Beginner",
+        "opmerking": ""
+      }
+    ],
+    "attitudeEnPersoonlijk": [
+      {
+        "skill": "Motivatie",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Willen werken, maar onzeker over eigen capaciteiten"
+      },
+      {
+        "skill": "Zelfvertrouwen",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Nog onzeker bij nieuwe opdrachten, maar toont groei."
+      },
+      {
+        "skill": "Werkattitudes",
+        "niveau": "Level 1 – Beginner",
+        "opmerking": "Stipt en loyaal"
+      },
+      {
+        "skill": "Sociaal",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Redelijk sociaal, maar kunnen moeite hebben met hiërarchische communicatie"
+      },
+      {
+        "skill": "Zelfstandigheid",
+        "niveau": "Level 1 – Beginner",
+        "opmerking": "Zelden zelfstandig in plannen of beslissen, Behoefte aan duidelijke instructies en begeleiding"
+      }
+    ],
+    "ervaring": "3 jaar als administratief medewerker bij een ziekenhuis.",
+    "hobbys": "Lezen, koken, padel.",
+    "interesses": "Gezondheidszorg, digitale tools, vrijwilligerswerk.",
+    "attesten": "VCA attest, rijbewijs B.",
+    "nationaliteit": "België"
+  },
+  "id-098765432": {
+    "id": "id-098765432",
+    "werkervaring": "<1 jaar",
+    "voornaam": "Noor",
+    "achternaam": "Bakker",
+    "geslacht": "Vrouw",
+    "straat": "Straat",
+    "nummer": "20",
+    "postcode": "3800",
+    "stad": "Sint-Truiden",
+    "land": "België",
+    "status": "Actief",
+    "telefoon": "0411221324",
+    "email": "noor.bakker@example.com",
+    "extraInfo": "",
+    "geboortedatum": "14-06-1998",
+    "diploma": "Lager onderwijs",
+    "vaardigheden": [
+      {
+        "skill": "SPSS, Word, Excel en eenvoudige EHR-systemen",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Ervaring met software"
+      },
+      {
+        "skill": "Nederlands",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": ""
+      },
+      {
+        "skill": "Engels",
+        "niveau": "Level 3 – Goed",
+        "opmerking": ""
+      },
+      {
+        "skill": "Frans",
+        "niveau": "Level 1 – Beginner",
+        "opmerking": ""
+      },
+      {
+        "skill": "Digitale vaardigheden",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "sociale media, tekstverwerking, e-mail, online tools"
+      },
+      {
+        "skill": "Werken met een transpallet",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Dagelijks gebruikt in magazijnomgeving, manuele transpallet"
+      },
+      {
+        "skill": "Basisonderhoud van gereedschap",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "In de bouw meegewerkt aan opruimen en klaarzetten van materiaal"
+      },
+      {
+        "skill": "Reinigen van gebouwen",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Tijdelijke jobs in kantoren en traphallen via interim"
+      },
+      {
+        "skill": "Goederen sorteren en stapelen",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Meerdere jaren ervaring in magazijnen"
+      }
+    ],
+    "attitudeEnPersoonlijk": [
+      {
+        "skill": "Motivatie",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Sterke intrinsieke motivatie om een maatschappelijke bijdrage te leveren"
+      },
+      {
+        "skill": "Zelfvertrouwen",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Nog onzeker bij nieuwe opdrachten, maar toont groei."
+      },
+      {
+        "skill": "Werkattitudes",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Leergierig, loyaal, zoekt begeleiding en feedback"
+      },
+      {
+        "skill": "Stressbestendig",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Minder stressbestendig bij hoge werkdruk of onduidelijke structuren"
+      },
+      {
+        "skill": "Samenwerken",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Rustige werker, vriendelijk, zoekt geen conflict"
+      },
+      {
+        "skill": "Zelfstandigheid",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Kan zelfstandig taken uitvoeren na duidelijke instructie"
+      },
+      {
+        "skill": "Flexibel inzetbaar",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Beschikbaar voor ochtend, avond en weekendshiften"
+      }
+    ],
+    "ervaring": "Ervaring in magazijn, schoonmaak en bouwwerf via verschillende interimopdrachten",
+    "hobbys": "Paardrijden",
+    "interesses": "Dieren, mensen",
+    "attesten": "Rijbewijs B, Basisveiligheid VCA (behaald in 2023)",
+    "nationaliteit": "België"
+  },
+  "id-1746289477950": {
+    "voornaam": "Fatima",
+    "achternaam": "Benali",
+    "geslacht": "Vrouw",
+    "straat": "Kastanjedreef",
+    "nummer": "12",
+    "postcode": "2660",
+    "stad": "Hoboken",
+    "land": "België",
+    "geboortedatum": "12-04-1979",
+    "nationaliteit": "België",
+    "email": "fatima.benali@example.com",
+    "telefoon": "0476987654",
+    "extraInfo": "Alleenstaande moeder van twee kinderen. Zoekt deeltijdse job met stabiele uren.",
+    "diploma": "Lager onderwijs",
+    "status": "Actief",
+    "vaardigheden": [
+      {
+        "skill": "Onthaal en telefonie",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Ervaring in huisartsenpraktijk, vriendelijk onthaal, afspraken inplannen."
+      },
+      {
+        "skill": "Zorgkundige taken",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Gewassen, geholpen bij mobiliteit en medicatie in woonzorgcentrum"
+      },
+      {
+        "skill": "Basis administratie",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Kent Word en Excel, ervaring met afsprakenbeheer"
+      },
+      {
+        "skill": "Nederlands",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Vloeiend mondeling, goed schriftelijk met kleine fouten."
+      },
+      {
+        "skill": "Eenvoudige e-tools gebruiken",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Gebruikt eBox, Mijn VDAB, Google Agenda en Zoom"
+      }
+    ],
+    "attitudeEnPersoonlijk": [
+      {
+        "skill": "Verantwoordelijkheidszin",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Betrouwbaar, komt afspraken altijd na"
+      },
+      {
+        "skill": "Omgaan met mensen",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Zeer sociaal, empathisch en rustig in contact met ouderen en gezinnen."
+      },
+      {
+        "skill": "Plannen en organiseren",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Zoekt nog evenwicht tussen werk en gezin, maar leert bij"
+      },
+      {
+        "skill": "Leergierigheid",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Volgt momenteel korte opleiding ‘werken met klanten’ via VDAB"
+      },
+      {
+        "skill": "Stressbestendigheid",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Soms onzeker bij onverwachte situaties, maar blijft kalm."
+      }
+    ],
+    "ervaring": "Onthaal (2 jaar), zorgkundige (3 jaar), vrijwilliger OCMW (2 jaar)",
+    "hobbys": "Koken, breien, workshops volgen, vrijwilligerswerk",
+    "interesses": "Zorg, administratie, werken met mensen, opleidingen volgen",
+    "attesten": "EHBO-certificaat, attest zorgkundige",
+    "id": "id-1746289477950"
+  },
+  "id-1746289889338": {
+    "voornaam": "Abdoulaye",
+    "achternaam": "Diallo",
+    "geslacht": "Man",
+    "straat": "Tuinwijkstraat",
+    "nummer": "12",
+    "postcode": "8800",
+    "stad": "Roeselare",
+    "land": "België",
+    "geboortedatum": "19-07-1978",
+    "nationaliteit": "Guinee",
+    "email": "",
+    "telefoon": "0497332109",
+    "extraInfo": "",
+    "diploma": "Geen",
+    "status": "Actief",
+    "vaardigheden": [
+      {
+        "skill": "envoudige taken in de groendienst",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Kan gras maaien, bladeren opruimen, onkruid verwijderen onder begeleiding."
+      },
+      {
+        "skill": "Manueel werk uitvoeren",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Sterk en handig, voert taken uit na demonstratie."
+      },
+      {
+        "skill": "Basisschoonmaak buitenruimtes",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Kent gebruik van borstel, vuilniszakken, vuilnisprikker."
+      },
+      {
+        "skill": "Frans",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Moedertaal"
+      },
+      {
+        "skill": "Nederlands",
+        "niveau": "Level 1 – Beginner",
+        "opmerking": "Kent losse woorden en zinnen, leert via pictogrammen en herhaling"
+      }
+    ],
+    "attitudeEnPersoonlijk": [
+      {
+        "skill": "Hard werken",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Doet zijn best, houdt van beweging"
+      },
+      {
+        "skill": "Begeleiding aanvaarden",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Luistert goed en herhaalt handelingen zoals voorgedaan."
+      },
+      {
+        "skill": "Samenwerken",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Vriendelijk, maar beperkt taalcontact met collega’s"
+      },
+      {
+        "skill": "Zelfstandig werken",
+        "niveau": "Level 1 – Beginner",
+        "opmerking": "Enkel mogelijk met duidelijke, herhaalde uitleg en visuele ondersteuning"
+      },
+      {
+        "skill": "Omgaan met verandering",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Heeft moeite bij onduidelijkheid, maar past zich aan met hulp"
+      }
+    ],
+    "ervaring": "Arbeid in bouw, groendienst en landbouw (2005–2023, binnen en buiten België",
+    "hobbys": "Tuinieren, wandelen",
+    "interesses": "Buitenwerk, werken met planten en dieren",
+    "attesten": "",
+    "id": "id-1746289889338"
+  },
+  "id-1746290576968": {
+    "voornaam": "Meryem",
+    "achternaam": "El Amrani",
+    "geslacht": "Vrouw",
+    "straat": "August Leyweg",
+    "nummer": "89",
+    "postcode": "2100",
+    "stad": "Deurne",
+    "land": "België",
+    "geboortedatum": "25-11-2004",
+    "nationaliteit": "Marokko",
+    "email": "",
+    "telefoon": "0478556328",
+    "extraInfo": "BSO – Verzorging en verkoop (2023)\nPas afgestudeerd. Spreekt thuis Arabisch, wil graag ervaring opdoen in verkoop of kinderopvang.",
+    "diploma": "Secundair",
+    "status": "Actief",
+    "vaardigheden": [
+      {
+        "skill": "Klanten bedienen aan kassa",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Stage in buurtwinkel, basiservaring met kassa en klanten begroeten."
+      },
+      {
+        "skill": "Omgaan met jonge kinderen",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Stage in kleuterschool, verzorging en spelbegeleiding"
+      },
+      {
+        "skill": "Nederlands",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Begrijpt eenvoudige werkinstructies, maakt soms grammaticale fouten."
+      },
+      {
+        "skill": "Digitale basisvaardigheden",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Kan e-mails openen, internet gebruiken en online afspraken maken"
+      },
+      {
+        "skill": "Ordelijk werken",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Let op netheid in werkruimte, vooral bij kinderzorg en verkoop"
+      }
+    ],
+    "attitudeEnPersoonlijk": [
+      {
+        "skill": "Leergierigheid",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Wil bijleren, open voor cursussen en praktijkervaring"
+      },
+      {
+        "skill": "Zorgzaamheid",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Zeer betrokken bij kinderen en ouderen, empathisch ingesteld."
+      },
+      {
+        "skill": "Samenwerken in team",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Rustige teamplayer, laat anderen uitspreken."
+      },
+      {
+        "skill": "Zelfvertrouwen",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Onzeker bij nieuwe situaties of onbekenden, groeit met positieve feedback"
+      },
+      {
+        "skill": "Verantwoordelijkheid opnemen",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Neemt taken op zich als ze duidelijk zijn, durft nog niet zelf initiatief nemen"
+      }
+    ],
+    "ervaring": "Stages in kleuterschool (2 maanden) en lokale buurtwinkel (3 weken)",
+    "hobbys": "Bakken, zorgen voor neefjes/nichtjes, YouTube kijken",
+    "interesses": "Kinderopvang, verkoop, koken, taal bijleren",
+    "attesten": "Attest werkplekleren kinderzorg, EHBO-basis",
+    "id": "id-1746290576968"
+  },
+  "id-1746291092449": {
+    "voornaam": "Patrick",
+    "achternaam": "Vermeulen",
+    "geslacht": "Man",
+    "straat": "Klaprozenstraat",
+    "nummer": "31",
+    "postcode": "8400",
+    "stad": "Oostende",
+    "land": "België",
+    "geboortedatum": "08-03-1971",
+    "nationaliteit": "België",
+    "email": "patrick.vermeulen@example.com",
+    "telefoon": "0472889104",
+    "extraInfo": "Was langdurig werkloos wegens gezondheidsproblemen, nu klaar om terug aan de slag te gaan in deeltijdse, rustige job",
+    "diploma": "Lager onderwijs",
+    "status": "Actief",
+    "vaardigheden": [
+      {
+        "skill": "Bedienen van drukpersen",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Ervaren met klassieke offsetpersen, maar technologie is intussen verouderd."
+      },
+      {
+        "skill": "Eenvoudig technisch inzicht",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Kan eenvoudige machines afstellen en kleine storingen oplossen."
+      },
+      {
+        "skill": "Fysiek belastend werk vermijden",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Kent zijn fysieke grenzen, volgt richtlijnen goed op (rugbeperking)"
+      },
+      {
+        "skill": "Eenvoudige administratie",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Kan formulieren invullen en afspraken noteren, mits begeleiding"
+      },
+      {
+        "skill": "Basis computergebruik",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Kan muis, toetsenbord en browser gebruiken, leert via e-inclusieproject"
+      }
+    ],
+    "attitudeEnPersoonlijk": [
+      {
+        "skill": "Punctualiteit",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Komt altijd op tijd, waardeert structuur"
+      },
+      {
+        "skill": "Doorzettingsvermogen",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Toont inzet om terug te werken ondanks moeilijke periode"
+      },
+      {
+        "skill": "Leren op de werkvloer",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Moeite met formele opleidingen, leert best via praktijk en stap-voor-stap begeleiding"
+      },
+      {
+        "skill": "Omgaan met stress",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Snel onzeker bij tijdsdruk, gebaat bij rustige werkomgeving."
+      },
+      {
+        "skill": "Collegialiteit",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Sociaal en loyaal in kleine teams, zoekt geen conflicten"
+      }
+    ],
+    "ervaring": "Drukkerijmedewerker (1992–2007), daarna geen tewerkstelling wegens medische redenen. Recent opnieuw geactiveerd via arbeidszorg en vrijwilligerswerk.",
+    "hobbys": "Vissen, wandelen, klusjes in huis",
+    "interesses": "Techniek, rustige repetitieve taken, eventueel sociale werkplaats",
+    "attesten": "",
+    "id": "id-1746291092449"
+  },
+  "id-1746291389811": {
+    "voornaam": "Kim",
+    "achternaam": "Peeters",
+    "geslacht": "Vrouw",
+    "straat": "Beukenlaan",
+    "nummer": "53",
+    "postcode": "9800",
+    "stad": "Sint-Niklaas",
+    "land": "België",
+    "geboortedatum": "15-06-1989",
+    "nationaliteit": "België",
+    "email": "",
+    "telefoon": "0499234578",
+    "extraInfo": "Heeft moeite met lezen en schrijven. Zoekt eenvoudig, stabiel werk in rustige omgeving met duidelijke begeleiding.",
+    "diploma": "Geen",
+    "status": "Actief",
+    "vaardigheden": [
+      {
+        "skill": "Poetsen van lokalen en sanitair",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Kan zelfstandig poetsen na uitleg, houdt van orde en netheid"
+      },
+      {
+        "skill": "Inpakken van goederen",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Ervaring in eenvoudig repetitief werk zoals verpakken, etiketteren"
+      },
+      {
+        "skill": "Eenvoudige instructies begrijpen",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Begrijpt mondelinge uitleg, liefst met voorbeeld of pictogram"
+      },
+      {
+        "skill": "Basisveiligheidsregels volgen",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Begrijpt visuele veiligheidsinstructies en PBM-gebruik"
+      },
+      {
+        "skill": "Eenvoudige taken herhalen",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Sterk in routinematig werk, weinig fouten bij herhaling."
+      }
+    ],
+    "attitudeEnPersoonlijk": [
+      {
+        "skill": "Doorzetten",
+        "niveau": "Level 4 – Zeer goed",
+        "opmerking": "Blijft proberen, ook al gaat het traag. Trots op wat lukt"
+      },
+      {
+        "skill": "Nauwkeurigheid",
+        "niveau": "Level 3 – Goed",
+        "opmerking": "Werkt traag maar precies, vooral bij inpakwerk"
+      },
+      {
+        "skill": "Samenwerken",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Verlegen, maar vriendelijk in kleine groep of vaste begeleider"
+      },
+      {
+        "skill": "Zelfstandig werken",
+        "niveau": "Level 2 – Basis",
+        "opmerking": "Kan zelfstandig werken aan eenvoudige taak met visuele ondersteuning"
+      },
+      {
+        "skill": "Zelfvertrouwen",
+        "niveau": "Level 1 – Beginner",
+        "opmerking": "Twijfelt vaak aan zichzelf, heeft nood aan bevestiging en een veilige werkcontext"
+      }
+    ],
+    "ervaring": "Tijdelijk werk in poetsdienst van school (2016), inpakwerk via maatwerkbedrijf (2018–2019). Nadien inactief door familiale omstandigheden",
+    "hobbys": "Planten verzorgen, muziek luisteren, wandelen",
+    "interesses": "Eenvoudig praktisch werk, vaste werkplek, stabiele werkuren",
+    "attesten": "Geen",
+    "id": "id-1746291389811"
+  }
+}

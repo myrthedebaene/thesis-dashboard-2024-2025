@@ -173,7 +173,6 @@ const VacatureEditDialog = ({ open, onClose, vacature, onSave }) => {
         <Tabs value={tab} onChange={(e, newVal) => setTab(newVal)} sx={{ mb: 3 }}>
           <Tab label="Algemene info" />
           <Tab label="Vaardigheden" />
-          <Tab label="Talenkennis" />
           <Tab label="Attitude & Persoonlijk" />
         </Tabs>
 
@@ -237,8 +236,7 @@ const VacatureEditDialog = ({ open, onClose, vacature, onSave }) => {
         )}
 
         {tab === 1 && renderCompetentie("vaardigheden")}
-        {tab === 2 && renderCompetentie("kennis")}
-        {tab === 3 && renderCompetentie("attitudeEnPersoonlijkeKenmerken")}
+        {tab === 2 && renderCompetentie("attitudeEnPersoonlijkeKenmerken")}
 
         <Typography variant="body2" color="text.secondary" sx={{ mt: 3 }}>
           Je kan hier het gevraagde niveau (threshold), en uitleg per level aanpassen of een competentie toevoegen/verwijderen.

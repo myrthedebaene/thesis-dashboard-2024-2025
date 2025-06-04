@@ -12,6 +12,7 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
+  Paper,
   Typography,
   IconButton,
   Tabs,
@@ -46,14 +47,13 @@ const defaultForm = {
   stad: "",
   land: "",
   geboortedatum: "",
+  nationaliteit: "",
   email: "",
   telefoon: "",
   extraInfo: "",
-  werkervaring: "",
   diploma: "",
   status: "Actief",
   vaardigheden: [],
-  kennis: [],
   attitudeEnPersoonlijk: [],
   ervaring: "",
   hobbys: "",
@@ -85,23 +85,19 @@ const CandidateFormDialog = ({ open, onClose, onSubmit, mode, candidate }) => {
   };
 
   const handleSubmit = () => {
-        // 1) Valideer verplichte velden
-        const errors = {};
-        if (!formData.voornaam)    errors.voornaam    = "Voornaam is verplicht";
-        if (!formData.achternaam)  errors.achternaam  = "Achternaam is verplicht";
-        // (voeg hier evt. meer verplichte velden toe)
-    
+    const { voornaam, achternaam } = formData;
   
-    
-        // 3) Stop als er nog errors zijn
-        if (Object.values(errors).some((msg) => msg)) {
-          return;
-        }
-    
-        // 4) Sla op en sluit de dialoog
-        onSubmit(formData);
-        onClose();
-     };
+    // Check op verplichte velden
+    const hasEmptyRequiredFields = !voornaam?.trim() || !achternaam?.trim();
+    const hasFieldErrors = formErrors.email || formErrors.telefoon;
+  
+    if (hasEmptyRequiredFields || hasFieldErrors) {
+      return; // niets doen als fout
+    }
+  
+    onSubmit(formData); // sla op...
+    onClose();          // ...en sluit enkel als geldig
+  };  
 
   const handleDeleteSkill = (field, index) => {
     const updated = [...formData[field]];
@@ -147,7 +143,6 @@ const CandidateFormDialog = ({ open, onClose, onSubmit, mode, candidate }) => {
         <Tabs value={tab} onChange={(e, newValue) => setTab(newValue)} sx={{ mb: 2 }}>
           <Tab label="Algemene info" />
           <Tab label="Vaardigheden" />
-          <Tab label="Kennis" />
           <Tab label="Attitude & Persoonlijk" />
         </Tabs>
 
@@ -156,7 +151,7 @@ const CandidateFormDialog = ({ open, onClose, onSubmit, mode, candidate }) => {
             {/* Algemene info */}
             <Grid item xs={6}><TextField label="Voornaam" value={formData.voornaam} onChange={(e) => handleChange("voornaam", e.target.value)} fullWidth margin="dense" required error={!formData.voornaam} helperText={!formData.voornaam ? "Verplicht" : ""} /></Grid>
             <Grid item xs={6}><TextField label="Achternaam" value={formData.achternaam} onChange={(e) => handleChange("achternaam", e.target.value)} fullWidth margin="dense" required error={!formData.achternaam} helperText={!formData.achternaam ? "Verplicht" : ""} /></Grid>
-            <Grid item xs={5}>
+            <Grid item xs={3}>
                     <InputMask
                       mask="99-99-9999"
                       value={formData.geboortedatum || ""}
@@ -174,17 +169,69 @@ const CandidateFormDialog = ({ open, onClose, onSubmit, mode, candidate }) => {
                       )}
                     </InputMask>
                   </Grid>
-            <Grid item xs={3}><FormControl fullWidth margin="dense"><InputLabel id="geslacht-label">Geslacht</InputLabel><Select labelId="geslacht-label" value={formData.geslacht} label="Geslacht" onChange={(e) => handleChange("geslacht", e.target.value)}><MenuItem value="Vrouw">Vrouw</MenuItem><MenuItem value="Man">Man</MenuItem><MenuItem value="X">X</MenuItem></Select></FormControl></Grid>
-            <Grid item xs={4}><FormControl fullWidth margin="dense"><InputLabel id="status-label">Status</InputLabel><Select labelId="status-label" value={formData.status} label="Status" onChange={(e) => handleChange("status", e.target.value)}><MenuItem value="Actief">Actief</MenuItem><MenuItem value="Niet Actief">Niet Actief</MenuItem></Select></FormControl></Grid>
-            <Grid item xs={6}><FormControl fullWidth margin="dense"><InputLabel id="werkervaring-label">Werkervaring</InputLabel><Select labelId="werkervaring-label" value={formData.werkervaring} label="Werkervaring" onChange={(e) => handleChange("werkervaring", e.target.value)}><MenuItem value="Geen">Geen</MenuItem><MenuItem value="<1 jaar">&lt;1 jaar</MenuItem><MenuItem value="1-3 jaar">1-3 jaar</MenuItem><MenuItem value=">3 jaar">&gt;3 jaar</MenuItem></Select></FormControl></Grid>
-            <Grid item xs={6}><FormControl fullWidth margin="dense"><InputLabel id="diploma-label">Diploma</InputLabel><Select labelId="diploma-label" value={formData.diploma} label="Diploma" onChange={(e) => handleChange("diploma", e.target.value)}><MenuItem value="Geen">Geen</MenuItem><MenuItem value="Lager onderwijs">Lager onderwijs</MenuItem><MenuItem value="Secundair">Secundair</MenuItem><MenuItem value="Hoger onderwijs">Hoger onderwijs</MenuItem><MenuItem value="Universitair">Universitair</MenuItem></Select></FormControl></Grid>
-            <Grid item xs={6}><TextField label="Straat" value={formData.straat} onChange={(e) => handleChange("straat", e.target.value)} fullWidth margin="dense" /></Grid>
-            <Grid item xs={2}><TextField label="Nummer" value={formData.nummer} onChange={(e) => handleChange("nummer", e.target.value)} fullWidth margin="dense" /></Grid>
-            <Grid item xs={4}><TextField label="Postcode" value={formData.postcode} onChange={(e) => handleChange("postcode", e.target.value)} fullWidth margin="dense" /></Grid>
-            <Grid item xs={6}><TextField label="Stad" value={formData.stad} onChange={(e) => handleChange("stad", e.target.value)} fullWidth margin="dense" /></Grid>
-            <Grid item xs={6}><Autocomplete freeSolo options={countries} value={formData.land} onChange={(event, newValue) => handleChange("land", newValue || "")} onInputChange={(event, newInputValue) => handleChange("land", newInputValue)} renderInput={(params) => (<TextField {...params} label="Land" margin="dense" fullWidth />)} /></Grid>
-            <Grid item xs={6}><TextField label="Email" value={formData.email} onChange={(e) => handleChange("email", e.target.value)} error={Boolean(formErrors.email)} helperText={formErrors.email} fullWidth margin="dense" /></Grid>
-            <Grid item xs={6}><TextField label="Telefoonnummer" value={formData.telefoon} onChange={(e) => handleChange("telefoon", e.target.value)} error={Boolean(formErrors.telefoon)} helperText={formErrors.telefoon} fullWidth margin="dense" /></Grid>
+            <Grid item xs={2}><FormControl fullWidth margin="dense"><InputLabel id="geslacht-label">Geslacht</InputLabel><Select labelId="geslacht-label" value={formData.geslacht} label="Geslacht" onChange={(e) => handleChange("geslacht", e.target.value)}><MenuItem value="Vrouw">Vrouw</MenuItem><MenuItem value="Man">Man</MenuItem><MenuItem value="X">X</MenuItem></Select></FormControl></Grid>
+            <Grid item xs={3}><FormControl fullWidth margin="dense"><InputLabel id="status-label">Status</InputLabel><Select labelId="status-label" value={formData.status} label="Status" onChange={(e) => handleChange("status", e.target.value)}><MenuItem value="Actief">Actief</MenuItem><MenuItem value="Niet Actief">Niet Actief</MenuItem></Select></FormControl></Grid>
+            <Grid item xs={4}><Autocomplete freeSolo options={countries} value={formData.nationaliteit} onChange={(event, newValue) => handleChange("nationaliteit", newValue || "")} onInputChange={(event, newInputValue) => handleChange("Nationaliteit", newInputValue)} renderInput={(params) => (<TextField {...params} label="Nationaliteit" margin="dense" fullWidth />)} /></Grid>
+            <Grid item xs={3}><FormControl fullWidth margin="dense"><InputLabel id="diploma-label">Diploma</InputLabel><Select labelId="diploma-label" value={formData.diploma} label="Diploma" onChange={(e) => handleChange("diploma", e.target.value)}><MenuItem value="Geen">Geen</MenuItem><MenuItem value="Lager onderwijs">Lager onderwijs</MenuItem><MenuItem value="Secundair">Secundair</MenuItem><MenuItem value="Hoger onderwijs">Hoger onderwijs</MenuItem><MenuItem value="Universitair">Universitair</MenuItem></Select></FormControl></Grid>
+            <Grid item xs={4}><TextField label="Telefoonnummer" value={formData.telefoon} onChange={(e) => handleChange("telefoon", e.target.value)} error={Boolean(formErrors.telefoon)} helperText={formErrors.telefoon} fullWidth margin="dense" /></Grid>
+            <Grid item xs={5}><TextField label="Email" value={formData.email} onChange={(e) => handleChange("email", e.target.value)} error={Boolean(formErrors.email)} helperText={formErrors.email} fullWidth margin="dense" /></Grid>
+            <Grid item xs={12}>
+  <Paper variant="outlined" sx={{ p: 1, mt: 0 }}>
+    <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 1 }}>
+      Adres
+    </Typography>
+    <Grid container spacing={2}>
+      <Grid item xs={6}>
+        <TextField
+          label="Straat"
+          value={formData.straat}
+          onChange={(e) => handleChange("straat", e.target.value)}
+          fullWidth
+          margin="dense"
+        />
+      </Grid>
+      <Grid item xs={2}>
+        <TextField
+          label="Nummer"
+          value={formData.nummer}
+          onChange={(e) => handleChange("nummer", e.target.value)}
+          fullWidth
+          margin="dense"
+        />
+      </Grid>
+      <Grid item xs={4}>
+        <TextField
+          label="Postcode"
+          value={formData.postcode}
+          onChange={(e) => handleChange("postcode", e.target.value)}
+          fullWidth
+          margin="dense"
+        />
+      </Grid>
+      <Grid item xs={6}>
+        <TextField
+          label="Stad"
+          value={formData.stad}
+          onChange={(e) => handleChange("stad", e.target.value)}
+          fullWidth
+          margin="dense"
+        />
+      </Grid>
+      <Grid item xs={6}>
+        <Autocomplete
+          freeSolo
+          options={countries}
+          value={formData.land}
+          onChange={(event, newValue) => handleChange("land", newValue || "")}
+          onInputChange={(event, newInputValue) => handleChange("land", newInputValue)}
+          renderInput={(params) => (
+            <TextField {...params} label="Land" margin="dense" fullWidth />
+          )}
+        />
+      </Grid>
+    </Grid>
+  </Paper>
+</Grid>
             <Grid item xs={12}><TextField label="Ervaring" value={formData.ervaring} onChange={(e) => handleChange("ervaring", e.target.value)} fullWidth multiline rows={2} margin="dense" /></Grid>
             <Grid item xs={6}><TextField label="Hobby's" value={formData.hobbys} onChange={(e) => handleChange("hobbys", e.target.value)} fullWidth margin="dense" /></Grid>
             <Grid item xs={6}><TextField label="Interesses" value={formData.interesses} onChange={(e) => handleChange("interesses", e.target.value)} fullWidth margin="dense" /></Grid>
@@ -195,8 +242,7 @@ const CandidateFormDialog = ({ open, onClose, onSubmit, mode, candidate }) => {
         )}
 
         {tab === 1 && renderSkillList("vaardigheden")}
-        {tab === 2 && renderSkillList("kennis")}
-        {tab === 3 && (
+        {tab === 2 && (
           <>
             {renderSkillList("attitudeEnPersoonlijk")}
           </>

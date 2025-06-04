@@ -1,0 +1,893 @@
+{
+  "v-1746291443386": {
+    "titel": "Chauffeur C",
+    "bedrijf": "PENNINCK",
+    "loon": "Marktcompetitief salaris, afhankelijk van ervaring en kwalificaties",
+    "locatie": "Rumbeeksegravier 110, 8800 ROESELARE",
+    "contract": "Vast",
+    "tijdregeling": [
+      "Dagwerk"
+    ],
+    "werkregime": "Voltijds",
+    "threshold": "70%",
+    "vaardighedenBarchartThreshold": "75%",
+    "attitudeEnPersoonlijkeKenmerkenBarchartThreshold": "80%",
+    "vaardigheden": [
+      {
+        "name": "Rijbewijs C met code 95",
+        "threshold": "4",
+        "levels": {
+          "level1": "Heeft nog geen rijbewijs C.",
+          "level2": "In het bezit van een rijbewijs C zonder code 95.",
+          "level3": "In het bezit van een rijbewijs C met code 95, maar weinig ervaring.",
+          "level4": "In het bezit van een rijbewijs C met code 95 en ruime ervaring in de wegenbouw."
+        }
+      },
+      {
+        "name": "Vakbekwaamheidsattest C",
+        "threshold": "3",
+        "levels": {
+          "level1": "Heeft geen vakbekwaamheidsattest C.",
+          "level2": "Bezig met het behalen van een vakbekwaamheidsattest C.",
+          "level3": "In het bezit van een vakbekwaamheidsattest C.",
+          "level4": "In het bezit van een vakbekwaamheidsattest C en ervaring in de praktijk."
+        }
+      },
+      {
+        "name": "Nederlands",
+        "threshold": "3",
+        "levels": {
+          "level1": "Beperkte kennis van het Nederlands.",
+          "level2": "Kan basisgesprekken voeren in het Nederlands.",
+          "level3": "Beheerst het Nederlands zeer goed in professionele context.",
+          "level4": "Uitstekende beheersing van het Nederlands, zowel mondeling als schriftelijk."
+        }
+      },
+      {
+        "name": "Laden en lossen van goederen",
+        "threshold": "3",
+        "levels": {
+          "level1": "Heeft geen ervaring met laden en lossen.",
+          "level2": "Kan goederen laden en lossen onder begeleiding.",
+          "level3": "Kan zelfstandig goederen laden en lossen.",
+          "level4": "Kan efficiënt en snel goederen laden en lossen, ook in complexe situaties."
+        }
+      },
+      {
+        "name": "Registreren van opvolg- en activiteitengegevens",
+        "threshold": "2",
+        "levels": {
+          "level1": "Heeft geen ervaring met het registreren van gegevens.",
+          "level2": "Kan basisgegevens registreren met hulp.",
+          "level3": "Kan zelfstandig en nauwkeurig gegevens registreren.",
+          "level4": "Kan complexe gegevens registreren en analyseren."
+        }
+      }
+    ],
+    "attitudeEnPersoonlijkeKenmerken": [
+      {
+        "name": "Zelfstandigheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Heeft veel begeleiding nodig bij het uitvoeren van taken.",
+          "level2": "Kan eenvoudige taken zelfstandig uitvoeren.",
+          "level3": "Kan de meeste taken zelfstandig uitvoeren.",
+          "level4": "Kan alle taken zelfstandig en efficiënt uitvoeren."
+        }
+      },
+      {
+        "name": "Betrouwbaarheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Heeft moeite om afspraken na te komen.",
+          "level2": "Komt meestal afspraken na.",
+          "level3": "Is betrouwbaar en komt afspraken na.",
+          "level4": "Is zeer betrouwbaar en overtreft vaak verwachtingen."
+        }
+      },
+      {
+        "name": "Samenwerken",
+        "threshold": "2",
+        "levels": {
+          "level1": "Heeft moeite met samenwerken in een team.",
+          "level2": "Kan samenwerken met anderen onder begeleiding.",
+          "level3": "Werkt goed samen met anderen.",
+          "level4": "Is een uitstekende teamspeler en bevordert samenwerking."
+        }
+      },
+      {
+        "name": "Verantwoordelijkheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Neemt zelden verantwoordelijkheid voor eigen acties.",
+          "level2": "Neemt soms verantwoordelijkheid voor eigen acties.",
+          "level3": "Neemt verantwoordelijkheid voor eigen acties.",
+          "level4": "Neemt altijd verantwoordelijkheid en stimuleert anderen om hetzelfde te doen."
+        }
+      },
+      {
+        "name": "Nauwkeurigheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Maakt vaak fouten bij het uitvoeren van taken.",
+          "level2": "Maakt af en toe fouten, maar leert ervan.",
+          "level3": "Werkt nauwkeurig en maakt zelden fouten.",
+          "level4": "Werkt zeer nauwkeurig en verbetert processen."
+        }
+      },
+      {
+        "name": "Verantwoordelijkheidsgevoel",
+        "threshold": "3",
+        "levels": {
+          "level1": "Heeft weinig verantwoordelijkheidsgevoel.",
+          "level2": "Toont soms verantwoordelijkheidsgevoel.",
+          "level3": "Toont verantwoordelijkheidsgevoel in de meeste situaties.",
+          "level4": "Heeft een sterk verantwoordelijkheidsgevoel en inspireert anderen."
+        }
+      }
+    ],
+    "extra": "Een uitdagende functie binnen een vervoersfirma verbonden aan een toonaangevend bedrijf in de wegenbouw. Werk in eigen streek (werven in West- en Oost-Vlaanderen). Mogelijkheid voor training en persoonlijke ontwikkeling. Solliciteren via Mevr. Virginie Speliers, mail: penninck@penninck.be, telefoon: 051/264500.",
+    "id": "v-1746291443386"
+  },
+  "v-1746291951408": {
+    "titel": "Inwonende tuinier/klushulp en huishoudhulp",
+    "bedrijf": "Niet gespecificeerd",
+    "loon": "Niet gespecificeerd",
+    "locatie": "Berlaar/Nijlen - Regio Lier - Heist o/d Berg",
+    "contract": "Vast",
+    "tijdregeling": [
+      "Dagwerk"
+    ],
+    "werkregime": "Voltijds",
+    "threshold": "70%",
+    "vaardighedenBarchartThreshold": "75%",
+    "attitudeEnPersoonlijkeKenmerkenBarchartThreshold": "80%",
+    "vaardigheden": [
+      {
+        "name": "Tuinonderhoud",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan basis tuinwerkzaamheden uitvoeren zoals zaaien en sproeien.",
+          "level2": "Kan zelfstandig planten en snoeien met enige begeleiding.",
+          "level3": "Is bekwaam in het onderhouden van gazons en waterpartijen.",
+          "level4": "Is expert in het aanleggen en onderhouden van complexe groene ruimten."
+        }
+      },
+      {
+        "name": "Kleine renovatie- en herstellingswerken",
+        "threshold": "2",
+        "levels": {
+          "level1": "Kan eenvoudige reparaties uitvoeren.",
+          "level2": "Kan basis renovatiewerken uitvoeren met minimale supervisie.",
+          "level3": "Kan zelfstandig kleine renovatieprojecten leiden.",
+          "level4": "Is expert in het uitvoeren van diverse renovatie- en herstellingswerken."
+        }
+      },
+      {
+        "name": "Huishoudelijke taken",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan basis huishoudelijke taken zoals schoonmaken uitvoeren.",
+          "level2": "Kan zelfstandig wassen en strijken met oog voor detail.",
+          "level3": "Is bekwaam in het beheren van huishoudelijke taken zoals voorraadbeheer.",
+          "level4": "Is expert in het efficiënt organiseren en uitvoeren van alle huishoudelijke taken."
+        }
+      },
+      {
+        "name": "Engelse taalvaardigheid",
+        "threshold": "2",
+        "levels": {
+          "level1": "Begrijpt basis Engelse instructies.",
+          "level2": "Kan eenvoudige gesprekken in het Engels voeren.",
+          "level3": "Kan effectief communiceren in het Engels.",
+          "level4": "Is vloeiend in Engels en kan complexe gesprekken voeren."
+        }
+      },
+      {
+        "name": "Schoonmaakmaterieel onderhouden",
+        "threshold": "2",
+        "levels": {
+          "level1": "Kan basis schoonmaakmaterieel onderhouden.",
+          "level2": "Kan zelfstandig schoonmaakmaterieel onderhouden en opbergen.",
+          "level3": "Is bekwaam in het efficiënt beheren van schoonmaakmaterieel.",
+          "level4": "Is expert in het onderhouden en optimaliseren van schoonmaakprocessen."
+        }
+      }
+    ],
+    "attitudeEnPersoonlijkeKenmerken": [
+      {
+        "name": "Zelfstandigheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan eenvoudige taken zelfstandig uitvoeren.",
+          "level2": "Kan zelfstandig werken met minimale supervisie.",
+          "level3": "Is bekwaam in het zelfstandig organiseren van werk.",
+          "level4": "Is expert in zelfstandig werken en het nemen van beslissingen."
+        }
+      },
+      {
+        "name": "Samenwerken",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan in een team werken met begeleiding.",
+          "level2": "Kan effectief samenwerken met collega's.",
+          "level3": "Is bekwaam in het leiden van teamactiviteiten.",
+          "level4": "Is expert in het bevorderen van teamcohesie en samenwerking."
+        }
+      },
+      {
+        "name": "Flexibiliteit",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan zich aanpassen aan veranderende omstandigheden.",
+          "level2": "Kan flexibel inspelen op onverwachte situaties.",
+          "level3": "Is bekwaam in het effectief omgaan met veranderingen.",
+          "level4": "Is expert in het anticiperen en aanpassen aan veranderingen."
+        }
+      },
+      {
+        "name": "Verantwoordelijkheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Neemt verantwoordelijkheid voor eenvoudige taken.",
+          "level2": "Draagt verantwoordelijkheid voor eigen werk.",
+          "level3": "Is bekwaam in het nemen van verantwoordelijkheid voor teamresultaten.",
+          "level4": "Is expert in het dragen van verantwoordelijkheid voor complexe projecten."
+        }
+      }
+    ],
+    "extra": "Je werkt in een klein team in een mooie omgeving. Woning is geschikt voor 2 personen. Combinatie met vacaturenummer 70444452. Solliciteren via mail naar mevrouw Cools (veerle.cools@vgpparks.eu) of Bart Carnuwal (Bart.Carnuwal@vdab.be).",
+    "id": "v-1746291951408"
+  },
+  "v-1746292232237": {
+    "titel": "Medewerker operationele inkoop",
+    "bedrijf": "Randstad",
+    "loon": "Niet gespecificeerd",
+    "locatie": "3650 STOKKEM",
+    "contract": "Vast",
+    "tijdregeling": [
+      "Dagwerk"
+    ],
+    "werkregime": "Deeltijds - 32 uren per week",
+    "threshold": "70%",
+    "vaardighedenBarchartThreshold": "75%",
+    "attitudeEnPersoonlijkeKenmerkenBarchartThreshold": "80%",
+    "vaardigheden": [
+      {
+        "name": "Talenkennis",
+        "threshold": "3",
+        "levels": {
+          "level1": "Begrijpt basiswoorden en zinnen in het Duits en Frans.",
+          "level2": "Kan eenvoudige gesprekken voeren in het Nederlands en Engels.",
+          "level3": "Spreekt vloeiend Nederlands en Engels, met basiskennis van Duits en Frans.",
+          "level4": "Beheerst meerdere talen vloeiend en kan professioneel communiceren."
+        }
+      },
+      {
+        "name": "MS Office en Excel",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan basisfuncties in MS Office gebruiken.",
+          "level2": "Is vertrouwd met de meeste functies van Excel.",
+          "level3": "Heeft een goede kennis van MS Office, met focus op Excel.",
+          "level4": "Beheerst Excel op expertniveau en kan complexe analyses uitvoeren."
+        }
+      },
+      {
+        "name": "ERP pakketten",
+        "threshold": "2",
+        "levels": {
+          "level1": "Heeft nog geen ervaring met ERP systemen.",
+          "level2": "Heeft basiskennis van ERP pakketten.",
+          "level3": "Kan zelfstandig werken met een ERP systeem.",
+          "level4": "Beheerst ERP pakketten volledig en kan anderen hierin trainen."
+        }
+      },
+      {
+        "name": "Administratieve vaardigheden",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan eenvoudige administratieve taken uitvoeren.",
+          "level2": "Is in staat om diverse administratieve taken te beheren.",
+          "level3": "Heeft uitstekende administratieve vaardigheden.",
+          "level4": "Beheerst alle aspecten van administratief werk en kan processen verbeteren."
+        }
+      },
+      {
+        "name": "Inkoopprocessen",
+        "threshold": "3",
+        "levels": {
+          "level1": "Heeft basiskennis van inkoopprocessen.",
+          "level2": "Kan inkooporders plaatsen en opvolgen.",
+          "level3": "Beheerst inkoopprocessen en kan deze zelfstandig uitvoeren.",
+          "level4": "Is expert in inkoopprocessen en kan strategisch advies geven."
+        }
+      }
+    ],
+    "attitudeEnPersoonlijkeKenmerken": [
+      {
+        "name": "Verantwoordelijkheidszin",
+        "threshold": "3",
+        "levels": {
+          "level1": "Neemt af en toe verantwoordelijkheid voor taken.",
+          "level2": "Is betrouwbaar en neemt verantwoordelijkheid voor eigen werk.",
+          "level3": "Toont een sterke verantwoordelijkheidszin en handelt proactief.",
+          "level4": "Is een voorbeeld van verantwoordelijkheid en inspireert anderen."
+        }
+      },
+      {
+        "name": "Zelfstandigheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Werkt onder begeleiding.",
+          "level2": "Kan zelfstandig werken met minimale supervisie.",
+          "level3": "Werkt volledig zelfstandig en neemt initiatief.",
+          "level4": "Is een zelfstarter en kan anderen begeleiden in zelfstandig werken."
+        }
+      },
+      {
+        "name": "Probleemoplossend vermogen",
+        "threshold": "3",
+        "levels": {
+          "level1": "Herken eenvoudige problemen.",
+          "level2": "Kan problemen identificeren en basisoplossingen voorstellen.",
+          "level3": "Heeft een sterk probleemoplossend vermogen en kan complexe problemen aanpakken.",
+          "level4": "Is een expert in probleemoplossing en kan innovatieve oplossingen ontwikkelen."
+        }
+      },
+      {
+        "name": "Assertiviteit",
+        "threshold": "3",
+        "levels": {
+          "level1": "Drukt soms zijn mening uit.",
+          "level2": "Is assertief in het uiten van ideeën en meningen.",
+          "level3": "Toont sterke assertiviteit in verschillende situaties.",
+          "level4": "Is zeer assertief en kan anderen overtuigen en beïnvloeden."
+        }
+      },
+      {
+        "name": "Volharding",
+        "threshold": "3",
+        "levels": {
+          "level1": "Geeft soms op bij tegenslag.",
+          "level2": "Blijft doorzetten bij uitdagingen.",
+          "level3": "Toont sterke volharding en bereikt doelen ondanks obstakels.",
+          "level4": "Is een toonbeeld van volharding en inspireert anderen om vol te houden."
+        }
+      },
+      {
+        "name": "Communicatieve vaardigheden",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan eenvoudige boodschappen overbrengen.",
+          "level2": "Communiceert effectief in dagelijkse situaties.",
+          "level3": "Heeft uitstekende communicatieve vaardigheden en kan complexe informatie duidelijk overbrengen.",
+          "level4": "Is een expert in communicatie en kan anderen hierin trainen."
+        }
+      }
+    ],
+    "extra": "Een uitdagende job met veel verantwoordelijkheid in een professionele en dynamische werkomgeving. Solliciteren kan via de site van de werkgever. Deze functie staat open voor iedereen, ongeacht leeftijd of gender.",
+    "id": "v-1746292232237"
+  },
+  "v-1746292594714": {
+    "titel": "Onderhoudstechnieker dagdienst",
+    "bedrijf": "vind! techniek",
+    "loon": "Verloning naar ervaring",
+    "locatie": "8790 WAREGEM",
+    "contract": "Vast",
+    "tijdregeling": [
+      "Dagwerk"
+    ],
+    "werkregime": "Voltijds",
+    "threshold": "70%",
+    "vaardighedenBarchartThreshold": "75%",
+    "attitudeEnPersoonlijkeKenmerkenBarchartThreshold": "80%",
+    "vaardigheden": [
+      {
+        "name": "Preventief onderhoud",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kent de basisprincipes van preventief onderhoud en kan eenvoudige taken uitvoeren onder begeleiding.",
+          "level2": "Kan zelfstandig preventief onderhoud uitvoeren op standaard machines.",
+          "level3": "Voert preventief onderhoud uit op complexe machines en kan problemen identificeren.",
+          "level4": "Ontwikkelt en implementeert preventieve onderhoudsstrategieën voor een breed scala aan machines."
+        }
+      },
+      {
+        "name": "Mechanische storingen opsporen en oplossen",
+        "threshold": "3",
+        "levels": {
+          "level1": "Herkenning van basismechanische storingen met hulp van een ervaren technieker.",
+          "level2": "Zelfstandig eenvoudige mechanische storingen oplossen.",
+          "level3": "Diagnosticeert en lost complexe mechanische storingen op.",
+          "level4": "Ontwikkelt methoden voor het voorkomen van mechanische storingen."
+        }
+      },
+      {
+        "name": "Elektrische storingen opsporen en oplossen",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan basis elektrische storingen herkennen en rapporteren.",
+          "level2": "Zelfstandig eenvoudige elektrische storingen oplossen.",
+          "level3": "Diagnosticeert en lost complexe elektrische storingen op.",
+          "level4": "Ontwikkelt en implementeert verbeteringen om elektrische storingen te minimaliseren."
+        }
+      },
+      {
+        "name": "Klantenadvies geven",
+        "threshold": "2",
+        "levels": {
+          "level1": "Begrijpt de basisbehoeften van klanten en kan eenvoudige vragen beantwoorden.",
+          "level2": "Geeft zelfstandig advies over standaard producten en diensten.",
+          "level3": "Adviseert klanten over complexe technische oplossingen.",
+          "level4": "Ontwikkelt klantgerichte strategieën voor advies en ondersteuning."
+        }
+      },
+      {
+        "name": "Rijbewijs B",
+        "threshold": "2",
+        "levels": {
+          "level1": "Heeft nog geen rijbewijs B.",
+          "level2": "Heeft een rijbewijs B en kan zelfstandig rijden.",
+          "level3": "Ervaren bestuurder met rijbewijs B, kan in diverse omstandigheden rijden.",
+          "level4": "Heeft rijbewijs B en C, en kan complexe rijtaken uitvoeren."
+        }
+      }
+    ],
+    "attitudeEnPersoonlijkeKenmerken": [
+      {
+        "name": "Teamwork",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan in een team werken met begeleiding.",
+          "level2": "Werkt effectief samen in een team en draagt bij aan teamdoelen.",
+          "level3": "Neemt een leidende rol in teamprojecten en bevordert samenwerking.",
+          "level4": "Ontwikkelt strategieën om teamwerk te optimaliseren en teamleden te motiveren."
+        }
+      },
+      {
+        "name": "Leergierigheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Toont interesse in leren en neemt deel aan basisopleidingen.",
+          "level2": "Volgt regelmatig trainingen en past nieuwe kennis toe.",
+          "level3": "Zoekt actief naar nieuwe leer- en ontwikkelingsmogelijkheden.",
+          "level4": "Stimuleert anderen om te leren en ontwikkelt opleidingsprogramma's."
+        }
+      },
+      {
+        "name": "Probleemoplossend vermogen",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan eenvoudige problemen identificeren en rapporteren.",
+          "level2": "Lost standaardproblemen zelfstandig op.",
+          "level3": "Analyseert complexe problemen en ontwikkelt effectieve oplossingen.",
+          "level4": "Implementeert innovatieve oplossingen voor complexe problemen en deelt best practices."
+        }
+      },
+      {
+        "name": "Flexibiliteit",
+        "threshold": "3",
+        "levels": {
+          "level1": "Past zich aan eenvoudige veranderingen aan.",
+          "level2": "Kan effectief werken in veranderende omstandigheden.",
+          "level3": "Beheert veranderingen en helpt anderen zich aan te passen.",
+          "level4": "Ontwikkelt strategieën voor flexibiliteit en verandering binnen het team."
+        }
+      },
+      {
+        "name": "Communicatievaardigheden",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan basisinformatie duidelijk overbrengen.",
+          "level2": "Communiceert effectief met collega's en klanten.",
+          "level3": "Beheert communicatie in complexe situaties en met diverse stakeholders.",
+          "level4": "Ontwikkelt en implementeert communicatieplannen voor het team of project."
+        }
+      },
+      {
+        "name": "Initiatief",
+        "threshold": "3",
+        "levels": {
+          "level1": "Neemt initiatief in eenvoudige taken met begeleiding.",
+          "level2": "Neemt zelfstandig initiatief in dagelijkse werkzaamheden.",
+          "level3": "Identificeert kansen voor verbetering en neemt initiatief voor verandering.",
+          "level4": "Stimuleert proactief gedrag en initiatief binnen het team."
+        }
+      }
+    ],
+    "extra": "Mogelijkheid tot overuren (uitbetaald of verlof); No-nonsense cultuur; Interne- en externe opleidingsmogelijkheden; Doorgroeimogelijkheden; Gratis koffie en water; Gratis carwash.",
+    "id": "v-1746292594714"
+  },
+  "v-1746292890693": {
+    "titel": "Verkoopsmedewerker",
+    "bedrijf": "ITZU Jobs",
+    "loon": "Aantrekkelijk salaris met extralegale voordelen",
+    "locatie": "9820 MERELBEKE-MELLE",
+    "contract": "Vast",
+    "tijdregeling": [
+      "Weekendwerk",
+      "Dagwerk"
+    ],
+    "werkregime": "Voltijds",
+    "threshold": "70%",
+    "vaardighedenBarchartThreshold": "70%",
+    "attitudeEnPersoonlijkeKenmerkenBarchartThreshold": "80%",
+    "vaardigheden": [
+      {
+        "name": "Klantenservice",
+        "threshold": "3",
+        "levels": {
+          "level1": "Begroet klanten vriendelijk en helpt hen bij eenvoudige vragen.",
+          "level2": "Kan klanten adviseren over producten en diensten.",
+          "level3": "Geeft gedetailleerd advies over brillen en lenzen en past monturen aan.",
+          "level4": "Behandelt complexe klantvragen en zorgt voor een uitstekende klanttevredenheid."
+        }
+      },
+      {
+        "name": "Productkennis",
+        "threshold": "3",
+        "levels": {
+          "level1": "Heeft basiskennis van de producten in de winkel.",
+          "level2": "Kan klanten informeren over de basiskenmerken van brillen en lenzen.",
+          "level3": "Adviseert klanten over verschillende productopties en hun voordelen.",
+          "level4": "Heeft uitgebreide kennis van alle producten en kan klanten helpen bij het maken van de beste keuze."
+        }
+      },
+      {
+        "name": "Voorraadbeheer",
+        "threshold": "2",
+        "levels": {
+          "level1": "Helpt bij het inpakken en etiketteren van producten.",
+          "level2": "Volgt de voorraad op en stelt tekorten vast.",
+          "level3": "Plaatst bestellingen en beheert de voorraad efficiënt.",
+          "level4": "Optimaliseert voorraadprocessen en zorgt voor een naadloze bevoorrading."
+        }
+      },
+      {
+        "name": "Verkoopruimte onderhoud",
+        "threshold": "2",
+        "levels": {
+          "level1": "Houdt de verkoopruimte schoon en netjes.",
+          "level2": "Controleert regelmatig de netheid en presentatie van producten.",
+          "level3": "Zorgt ervoor dat de winkel altijd uitnodigend en aantrekkelijk is.",
+          "level4": "Implementeert verbeteringen in de winkelpresentatie om de verkoop te stimuleren."
+        }
+      },
+      {
+        "name": "Betalingen verwerken",
+        "threshold": "2",
+        "levels": {
+          "level1": "Ontvangt betalingen en geeft wisselgeld.",
+          "level2": "Beheert de kassa en verwerkt betalingen efficiënt.",
+          "level3": "Kan problemen met betalingen oplossen en klanten helpen bij vragen.",
+          "level4": "Optimaliseert betalingsprocessen voor een snellere afhandeling."
+        }
+      }
+    ],
+    "attitudeEnPersoonlijkeKenmerken": [
+      {
+        "name": "Leergierigheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Toont interesse in nieuwe informatie.",
+          "level2": "Volgt interne opleidingen met enthousiasme.",
+          "level3": "Past geleerde kennis toe in de praktijk.",
+          "level4": "Zoekt actief naar nieuwe leermogelijkheden en deelt kennis met collega's."
+        }
+      },
+      {
+        "name": "Klantgerichtheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Is vriendelijk en behulpzaam naar klanten toe.",
+          "level2": "Luistert naar klantbehoeften en biedt passende oplossingen.",
+          "level3": "Bouwt sterke relaties op met klanten en zorgt voor herhaalbezoeken.",
+          "level4": "Overtreft klantverwachtingen en zorgt voor een uitstekende klanttevredenheid."
+        }
+      },
+      {
+        "name": "Communicatief",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan basisinformatie duidelijk overbrengen.",
+          "level2": "Communiceert effectief met klanten en collega's.",
+          "level3": "Beheerst communicatie in verschillende situaties en met diverse klanten.",
+          "level4": "Is een voorbeeld in communicatie en traint anderen hierin."
+        }
+      },
+      {
+        "name": "Modebewustzijn",
+        "threshold": "2",
+        "levels": {
+          "level1": "Heeft een basisgevoel voor mode.",
+          "level2": "Adviseert klanten over modieuze keuzes.",
+          "level3": "Volgt modeontwikkelingen en past deze kennis toe in advies.",
+          "level4": "Is een trendsetter en beïnvloedt de modekeuzes van klanten."
+        }
+      },
+      {
+        "name": "Oog voor detail",
+        "threshold": "3",
+        "levels": {
+          "level1": "Let op basisdetails bij producten.",
+          "level2": "Zorgt ervoor dat producten correct gepresenteerd worden.",
+          "level3": "Identificeert en corrigeert kleine fouten in productpresentatie.",
+          "level4": "Zorgt voor perfectie in alle aspecten van productpresentatie."
+        }
+      },
+      {
+        "name": "Flexibiliteit",
+        "threshold": "2",
+        "levels": {
+          "level1": "Is bereid om in het weekend te werken.",
+          "level2": "Past zich aan veranderende werkschema's aan.",
+          "level3": "Kan snel schakelen tussen verschillende taken en verantwoordelijkheden.",
+          "level4": "Beheert veranderingen en onverwachte situaties met gemak."
+        }
+      }
+    ],
+    "extra": "Maaltijdcheques van 8 EUR, groeps- en hospitalisatieverzekering, tussenkomst in woon-werkverkeer, personeelskorting op brillen en andere producten, kwartaalbonussen en cadeaucheques, gerichte optiekopleiding met doorgroeimogelijkheden, persoonlijke begeleiding door ervaren collega's, 6 ADV-dagen, dynamische en klantgerichte werkomgeving, mogelijkheid om in een modebewuste sector te werken.",
+    "id": "v-1746292890693"
+  },
+  "v-1746293204155": {
+    "titel": "Kinderbegeleider kinderdagverblijf",
+    "bedrijf": "FERM",
+    "loon": "In overeenstemming met de kinderopvangsector",
+    "locatie": "3550 HEUSDEN-ZOLDER",
+    "contract": "Vast",
+    "tijdregeling": [
+      "Dagwerk"
+    ],
+    "werkregime": "Deeltijds - 20 uren per week",
+    "threshold": "70%",
+    "vaardighedenBarchartThreshold": "60%",
+    "attitudeEnPersoonlijkeKenmerkenBarchartThreshold": "80%",
+    "vaardigheden": [
+      {
+        "name": "Omgaan met een diversiteit aan kinderen",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan omgaan met kinderen onder begeleiding.",
+          "level2": "Kan zelfstandig met een kleine groep kinderen werken.",
+          "level3": "Kan effectief omgaan met een diverse groep kinderen en hun behoeften.",
+          "level4": "Is een expert in het managen van diversiteit en kan anderen hierin begeleiden."
+        }
+      },
+      {
+        "name": "Samenwerken met het gezin als partner in de opvoeding",
+        "threshold": "3",
+        "levels": {
+          "level1": "Begrijpt de basisprincipes van samenwerking met ouders.",
+          "level2": "Kan zelfstandig met ouders communiceren over de opvoeding.",
+          "level3": "Kan effectief partnerschappen met gezinnen opbouwen en onderhouden.",
+          "level4": "Is een expert in het ontwikkelen van langdurige samenwerkingen met gezinnen."
+        }
+      },
+      {
+        "name": "Comfortzorg verschaffen",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan basis comfortzorg bieden onder toezicht.",
+          "level2": "Kan zelfstandig comfortzorg bieden aan kinderen.",
+          "level3": "Kan comfortzorg bieden in complexe situaties.",
+          "level4": "Is een expert in comfortzorg en kan anderen hierin trainen."
+        }
+      },
+      {
+        "name": "Spelactiviteiten organiseren",
+        "threshold": "2",
+        "levels": {
+          "level1": "Kan eenvoudige spelactiviteiten uitvoeren.",
+          "level2": "Kan zelfstandig spelactiviteiten organiseren.",
+          "level3": "Kan spelactiviteiten aanpassen aan de behoeften van kinderen.",
+          "level4": "Is een expert in het ontwikkelen van innovatieve spelactiviteiten."
+        }
+      },
+      {
+        "name": "Het kind begeleiden bij ontwikkelings- en leeractiviteiten",
+        "threshold": "3",
+        "levels": {
+          "level1": "Begrijpt de basis van ontwikkelingsactiviteiten.",
+          "level2": "Kan zelfstandig ontwikkelingsactiviteiten begeleiden.",
+          "level3": "Kan ontwikkelingsactiviteiten aanpassen aan individuele behoeften.",
+          "level4": "Is een expert in het ontwerpen van ontwikkelingsprogramma's."
+        }
+      }
+    ],
+    "attitudeEnPersoonlijkeKenmerken": [
+      {
+        "name": "Empathie",
+        "threshold": "3",
+        "levels": {
+          "level1": "Toont basisempathie in interacties.",
+          "level2": "Kan empathie tonen in verschillende situaties.",
+          "level3": "Kan empathie effectief gebruiken om relaties te verbeteren.",
+          "level4": "Is een expert in het toepassen van empathie in complexe situaties."
+        }
+      },
+      {
+        "name": "Communicatief vaardig",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan basisgesprekken voeren.",
+          "level2": "Kan effectief communiceren met ouders en collega's.",
+          "level3": "Kan complexe communicatie-uitdagingen aanpakken.",
+          "level4": "Is een expert in communicatie en kan anderen hierin trainen."
+        }
+      },
+      {
+        "name": "Teamspeler",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan in een team werken onder begeleiding.",
+          "level2": "Kan zelfstandig in een team functioneren.",
+          "level3": "Kan effectief bijdragen aan teamdoelen.",
+          "level4": "Is een expert in teamdynamiek en kan teams leiden."
+        }
+      },
+      {
+        "name": "Flexibiliteit",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan zich aanpassen aan eenvoudige veranderingen.",
+          "level2": "Kan zich zelfstandig aanpassen aan nieuwe situaties.",
+          "level3": "Kan effectief omgaan met complexe veranderingen.",
+          "level4": "Is een expert in flexibiliteit en kan anderen hierin begeleiden."
+        }
+      },
+      {
+        "name": "Verantwoordelijkheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Neemt verantwoordelijkheid voor eenvoudige taken.",
+          "level2": "Neemt zelfstandig verantwoordelijkheid voor toegewezen taken.",
+          "level3": "Neemt verantwoordelijkheid voor teamdoelen.",
+          "level4": "Is een expert in verantwoordelijkheid en kan anderen hierin coachen."
+        }
+      },
+      {
+        "name": "Proactief",
+        "threshold": "3",
+        "levels": {
+          "level1": "Toont basisproactiviteit in taken.",
+          "level2": "Kan zelfstandig proactief handelen in situaties.",
+          "level3": "Kan proactief bijdragen aan teamdoelen.",
+          "level4": "Is een expert in proactiviteit en kan anderen hierin inspireren."
+        }
+      }
+    ],
+    "extra": "Je werkt tussen 7 en 18u. Je krijgt een voordelenpakket met talrijke kortingen voor werknemers (voeding, kleding, uitstapjes). Overname van anciënniteit uit de kinderopvang. Vakantiegeld en eindejaarspremie. Kilometer- of fietsvergoeding. Persoonlijke begeleiding met oog voor jouw talenten. Interessante opleidingen op maat. Goed evenwicht tussen werk en privé dankzij een job dichtbij huis en gunstige verlofregeling: extra verlofdagen en leeftijdsverlof.",
+    "id": "v-1746293204155"
+  },
+  "v-1746293530296": {
+    "titel": "Verkoopmedewerker ICT",
+    "bedrijf": "ADECCO",
+    "loon": "Een aantrekkelijk salaris en bonussysteem voor jouw commerciële prestaties",
+    "locatie": "9041 OOSTAKKER",
+    "contract": "Tijdelijk met optie vast",
+    "tijdregeling": [
+      "Dagwerk"
+    ],
+    "werkregime": "Voltijds",
+    "threshold": "70%",
+    "vaardighedenBarchartThreshold": "75%",
+    "attitudeEnPersoonlijkeKenmerkenBarchartThreshold": "80%",
+    "vaardigheden": [
+      {
+        "name": "Commerciële strategie ontwikkelen",
+        "threshold": "3",
+        "levels": {
+          "level1": "Begrijpt basisprincipes van commerciële strategieën.",
+          "level2": "Kan eenvoudige strategieën voorstellen en uitvoeren.",
+          "level3": "Ontwikkelt en implementeert effectieve commerciële strategieën.",
+          "level4": "Leidt complexe strategische initiatieven en optimaliseert processen."
+        }
+      },
+      {
+        "name": "Klantenservice",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan basisvragen van klanten beantwoorden.",
+          "level2": "Biedt goede klantenservice en lost eenvoudige problemen op.",
+          "level3": "Levert uitstekende klantenservice en behandelt klachten effectief.",
+          "level4": "Ontwikkelt en implementeert klantenservicebeleid."
+        }
+      },
+      {
+        "name": "Technische ondersteuning bieden",
+        "threshold": "2",
+        "levels": {
+          "level1": "Begrijpt basis technische problemen.",
+          "level2": "Kan eenvoudige technische problemen oplossen.",
+          "level3": "Biedt uitgebreide technische ondersteuning.",
+          "level4": "Leidt technische ondersteuningsteams en ontwikkelt oplossingen."
+        }
+      },
+      {
+        "name": "Netwerkontwikkeling",
+        "threshold": "3",
+        "levels": {
+          "level1": "Heeft basiskennis van netwerkontwikkeling.",
+          "level2": "Kan bijdragen aan netwerkontwikkelingsprojecten.",
+          "level3": "Ontwikkelt en onderhoudt effectieve netwerken.",
+          "level4": "Leidt netwerkontwikkelingsinitiatieven en optimaliseert netwerken."
+        }
+      },
+      {
+        "name": "Marktanalyse",
+        "threshold": "2",
+        "levels": {
+          "level1": "Kan basisgegevens over de markt verzamelen.",
+          "level2": "Voert eenvoudige marktanalyses uit.",
+          "level3": "Analyseert markttrends en adviseert strategische beslissingen.",
+          "level4": "Leidt uitgebreide marktanalyses en ontwikkelt strategische aanbevelingen."
+        }
+      }
+    ],
+    "attitudeEnPersoonlijkeKenmerken": [
+      {
+        "name": "Commerciële mindset",
+        "threshold": "3",
+        "levels": {
+          "level1": "Toont interesse in commerciële activiteiten.",
+          "level2": "Heeft een basisbegrip van commerciële processen.",
+          "level3": "Heeft een sterke commerciële drive en behaalt resultaten.",
+          "level4": "Leidt commerciële initiatieven en inspireert anderen."
+        }
+      },
+      {
+        "name": "Passie voor technologie",
+        "threshold": "3",
+        "levels": {
+          "level1": "Toont interesse in technologie.",
+          "level2": "Heeft basiskennis van technologie.",
+          "level3": "Heeft uitgebreide kennis en passie voor technologie.",
+          "level4": "Is een expert in technologie en inspireert anderen."
+        }
+      },
+      {
+        "name": "Communicatieve vaardigheden",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan basisinformatie duidelijk overbrengen.",
+          "level2": "Communiceert effectief met collega's en klanten.",
+          "level3": "Communiceert overtuigend en bouwt sterke relaties op.",
+          "level4": "Leidt communicatie-initiatieven en inspireert anderen."
+        }
+      },
+      {
+        "name": "Klantgerichtheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Begrijpt het belang van klanttevredenheid.",
+          "level2": "Biedt goede service en streeft naar klanttevredenheid.",
+          "level3": "Zorgt voor uitstekende klanttevredenheid en bouwt sterke relaties op.",
+          "level4": "Leidt klantgerichte initiatieven en inspireert anderen."
+        }
+      },
+      {
+        "name": "Creativiteit",
+        "threshold": "2",
+        "levels": {
+          "level1": "Toont interesse in creatieve oplossingen.",
+          "level2": "Bedenkt eenvoudige creatieve oplossingen.",
+          "level3": "Ontwikkelt innovatieve ideeën en oplossingen.",
+          "level4": "Leidt creatieve initiatieven en inspireert anderen."
+        }
+      },
+      {
+        "name": "Zelfstandigheid",
+        "threshold": "3",
+        "levels": {
+          "level1": "Kan eenvoudige taken zelfstandig uitvoeren.",
+          "level2": "Werkt zelfstandig aan toegewezen projecten.",
+          "level3": "Werkt zelfstandig en neemt initiatief.",
+          "level4": "Leidt zelfstandig projecten en inspireert anderen."
+        }
+      }
+    ],
+    "extra": "Werkuren zijn van 10.00u tot 18.00u van maandag tot vrijdag en op zaterdag van 10.00u tot 17.00u. Vrij op zondag, feestdagen en een vrije dag in de week. De functie biedt veel groeimogelijkheden in een stimulerende werkomgeving. Er is een hecht team dat samenwerking en plezier hoog in het vaandel heeft.",
+    "id": "v-1746293530296"
+  }
+}
